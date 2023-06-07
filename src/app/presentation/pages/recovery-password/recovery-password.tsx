@@ -1,5 +1,7 @@
+import { FormProvider, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useRecoveryPasswordMutation } from '~/app/application/auth/store/hooks';
 import { ROUTES } from '~/app/main/types';
 
@@ -14,8 +16,6 @@ import {
   Description,
   TitleForm
 } from './recovery-password-styles';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { FormProvider, useForm } from 'react-hook-form';
 const resolver = zodResolver(FormRecoveryPasswordValidationSchema);
 const RecoveryPassword = () => {
   const methods = useForm({ resolver, mode: 'onSubmit' });

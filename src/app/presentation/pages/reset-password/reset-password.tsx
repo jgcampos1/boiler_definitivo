@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 
+import { zodResolver } from '@hookform/resolvers/zod';
 import {
   useResetPasswordMutation,
   useSendConfirmationEmailMutation
@@ -21,8 +23,6 @@ import {
   Description,
   TitleForm
 } from './reset-password-styles';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { FormProvider, useForm } from 'react-hook-form';
 const resolver = zodResolver(ResetPasswordFormValidation);
 
 const ResetPassword = () => {

@@ -1,5 +1,4 @@
 import type { TokenDecoder } from '~/app/core/application/protocols/token-decoder';
-import { LocalCommand } from '~/app/core/domain/command/local-command';
 
 import { TokenModel } from '../../domain/models/toke-model';
 

@@ -1,3 +1,4 @@
+import { FormProvider } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 
 import { RegisterForm } from '~/app/application/auth/domain/models';
@@ -6,7 +7,6 @@ import { ROUTES } from '~/app/main/types';
 
 import { useForm, useToastAlert } from '../../hooks';
 import FormRegister from './form-register/form-register';
-import { FormProvider } from 'react-hook-form';
 
 const Register = () => {
   const navigate = useNavigate();

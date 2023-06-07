@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
 
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useLazyAddressInfoQuery } from '~/app/application/general/store/hooks';
 import {
   useLazyGetUserProfileQuery,
@@ -16,10 +18,9 @@ import {
 } from '../../hooks';
 import ModalChangePassword from './components/modal-change-password/modal-change-password';
 import FormUser from './form-user/form-user';
-import { Container, ButtonEdit, Title, TitleContent } from './user-styles';
-import { FormProvider, useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
 import { UserFormValidation } from './form-user/form-validation';
+import { Container, ButtonEdit, Title, TitleContent } from './user-styles';
+
 const resolver = zodResolver(UserFormValidation);
 
 export const User = () => {

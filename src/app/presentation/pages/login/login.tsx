@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
-import { zodResolver } from '@hookform/resolvers/zod';
 
+import { zodResolver } from '@hookform/resolvers/zod';
 import { LoginForm } from '~/app/application/auth/domain/models';
 import {
   useEmailLoginMutation,
@@ -16,7 +17,6 @@ import { useAuth, useToast } from '../../hooks';
 import FormLogin from './form-login/form-login';
 import { LoginFormValidationSchema } from './form-login/form-validation';
 import { Button, Container, Content, Text } from './login-styles';
-import { FormProvider, useForm } from 'react-hook-form';
 
 const resolver = zodResolver(LoginFormValidationSchema);
 const Login = () => {

@@ -1,5 +1,6 @@
 import { type Either, Error, Success } from '~/app/core/domain/either/either';
 
+// TODO: Verify this code any, used to handle erros just in one place.
 type Predicate = (value: any) => boolean;
 
 export type CombinedPredicated<E> = Array<[Predicate, E]>;

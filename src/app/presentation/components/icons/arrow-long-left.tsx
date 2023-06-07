@@ -1,8 +1,5 @@
 import { TrendingFlatOutlined } from '@mui/icons-material';
-type Props = {
-  className?: string;
-};
 
-export const ArrowLong = ({ className }: Props) => {
+export const ArrowLong = () => {
   return <TrendingFlatOutlined sx={{ transform: 'translatex 180' }} />;
 };

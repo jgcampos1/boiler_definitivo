@@ -1,5 +1,5 @@
-import { Fragment, ReactNode, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Fragment, ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   CircularProgress,
@@ -9,7 +9,6 @@ import {
 } from '@material-ui/core';
 import { Box } from '@mui/system';
 import clsx from 'clsx';
-import { useTranslation } from '~/app/presentation/hooks';
 
 import { useStyles } from './more-option-menu-item-styles';
 

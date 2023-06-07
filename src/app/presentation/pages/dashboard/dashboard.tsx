@@ -1,14 +1,8 @@
 import { useSelectors } from '../../hooks';
-import {
-  Container,
-  DescriptionOption,
-  WellComeTitle
-} from './dashboard-styles';
+import { Container, WellComeTitle } from './dashboard-styles';
 
 const Dashboard = () => {
   const user = useSelectors.User();
-
-  const goTo = <DescriptionOption variant='body2'>ir para</DescriptionOption>;
 
   return (
     <Container>

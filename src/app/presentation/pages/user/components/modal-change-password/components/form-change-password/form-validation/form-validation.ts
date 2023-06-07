@@ -17,7 +17,6 @@ export const ChangePasswordFormValidation = z
       .min(8, { message: 'A senha deve ter no mínimo 8 caracteres' })
   })
   .superRefine((data) => {
-    console.log(data, data.newPassword === data.newPasswordConfirmation);
     return (
       data.newPassword === data.newPasswordConfirmation,
       {

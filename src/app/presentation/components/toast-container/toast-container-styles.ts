@@ -1,9 +1,5 @@
 import { makeStyles, Theme } from '@material-ui/core';
 
-type StyleProps = {
-  width: number;
-};
-
 export const useStyles = makeStyles((theme: Theme) => ({
   root: {
     zIndex: 9999,

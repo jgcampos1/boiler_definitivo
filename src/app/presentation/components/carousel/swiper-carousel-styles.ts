@@ -30,7 +30,7 @@ const StyledSwiperProps = ['slideFitContent', 'bulletBottomPosition'];
 export const StyledSwiper = styled(Swiper, {
   shouldForwardProp: (prop) =>
     includesForwardProps(prop as string, StyledSwiperProps)
-})<SwiperProps>(({ theme, slideFitContent, bulletBottomPosition }) => ({
+})<SwiperProps>(({ theme, slideFitContent }) => ({
   '&.swiper': {
     position: 'relative',
     overflowX: 'clip',

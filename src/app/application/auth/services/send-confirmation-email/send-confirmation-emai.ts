@@ -1,9 +1,5 @@
-import type { LoginForm } from '~/app/application/auth/domain/models';
 import { RequestResponse } from '~/app/core/application/http-response/http-response';
-import type {
-  CacheStorage,
-  HttpClient
-} from '~/app/core/application/protocols';
+import type { HttpClient } from '~/app/core/application/protocols';
 import { HttpMethod } from '~/app/core/application/protocols';
 import type { ServiceCommand } from '~/app/core/domain/command/service-command';
 import { error, success } from '~/app/core/domain/either/either';

@@ -22,7 +22,7 @@ export type AuthSliceState = TokenModel;
 
 const cacheLocalStorage = cacheStorage;
 const tokenKey = AUTH_STORAGE_TOKENS.AUTH;
-const tokenStorage: any = cacheLocalStorage.get<string>(tokenKey);
+const tokenStorage = cacheLocalStorage.get<string>(tokenKey);
 export const SET_TOKEN_INITIAL_STATE: TokenModel = {
   accessToken: tokenStorage
 };

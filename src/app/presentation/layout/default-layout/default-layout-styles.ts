@@ -15,7 +15,7 @@ export const Container = styled(Box)(({ theme }) => ({
   }
 }));
 
-export const MenuContent = styled(Box)(({ theme }) => ({
+export const MenuContent = styled(Box)(() => ({
   display: 'flex',
   width: '100%',
   alignItems: 'flex-start',

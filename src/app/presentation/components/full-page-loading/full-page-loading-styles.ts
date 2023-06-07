@@ -1,6 +1,6 @@
 import { styled, Box, CircularProgress } from '@mui/material';
 
-export const Container = styled(Box)(({ theme }) => ({
+export const Container = styled(Box)(() => ({
   width: '100vw',
   height: '100vh',
   display: 'flex',

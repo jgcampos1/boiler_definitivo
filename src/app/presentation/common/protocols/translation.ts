@@ -1,5 +1,5 @@
 export interface Translation<T> {
-  translate: any;
+  translate: T;
   language: AvailableLanguages;
   updateLanguage: (language: AvailableLanguages) => void;
 }

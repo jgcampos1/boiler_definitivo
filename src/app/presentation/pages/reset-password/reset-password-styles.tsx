@@ -1,5 +1,4 @@
 import { styled, Box, Typography } from '@mui/material';
-import { typography } from '@mui/system';
 import { BaseButton, TextButton } from '~/app/presentation/components';
 import Colors from '~/app/presentation/styles/colors';
 
@@ -35,7 +34,7 @@ export const TitleForm = styled(Typography)(({ theme }) => ({
 
 export const Description = styled(Typography)(() => ({}));
 
-export const BackPageButton = styled(TextButton)(({ theme }) => ({
+export const BackPageButton = styled(TextButton)(() => ({
   maxWidth: '30%',
   margin: '0 auto 0 0',
   alignContent: 'flex-start'

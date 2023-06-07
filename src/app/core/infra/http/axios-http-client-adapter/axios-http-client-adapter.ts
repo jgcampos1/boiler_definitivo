@@ -35,7 +35,7 @@ export class AxiosHttpClientAdapter implements HttpClient {
         statusCode: axiosResponse.status,
         body: axiosResponse.data
       };
-    } catch (error: any) {
+    } catch (error) {
       return {
         error: error.response?.data,
         statusCode: error.response?.status,

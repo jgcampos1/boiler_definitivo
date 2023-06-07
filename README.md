@@ -40,43 +40,21 @@ The project use the following `libs`:
 ├── public
 │   ├── assets
 │   │   └── icons
-│   └── locales
-│       ├── en
-│       └── pt-BR
+│   └── locales (Translation Files)
+│       ├── en (For each language two letter ISO code)
 └── src
     └── app
         ├── application
-        │   ├── auth
-        │   │   ├── api
+        │   ├── auth (Authorization Module)
+        │   │   ├── api (Register API Routes)
         │   │   ├── domain
-        │   │   │   ├── entities
-        │   │   │   └── models
-        │   │   ├── services
-        │   │   │   ├── confirmation-token
-        │   │   └── store
+        │   │   │   ├── entities TODO: Check TODO
+        │   │   │   └── models (The API body models)
+        │   │   ├── services (Where we add all services that call API routes)
+        │   │   │   ├── confirmation-token (Each route call service)
+        │   │   └── store (Actions dos slices do React Toolkit)
         │   │       ├── actions
         │   │       └── slice
-        │   ├── general
-        │   │   ├── api
-        │   │   ├── domain
-        │   │   ├── services
-        │   │   ├── store
-        │   │   └── toast
-        │   │       ├── actions
-        │   │       ├── selectors
-        │   │       ├── slice
-        │   │       └── types
-        │   └── user
-        │       ├── application
-        │       │   ├── api
-        │       │   └── services
-        │       │       ├── get-user-profile
-        │       ├── domain
-        │       │   ├── entities
-        │       │   └── model
-        │       └── store
-        │           ├── actions
-        │           └── slice
         ├── core
         │   ├── application
         │   │   ├── http-response
@@ -185,3 +163,11 @@ The project use the following `libs`:
             └── styles
 
 ```
+
+# TODO
+
+- [] Remove all `index.ts` files.
+- [] Remove entities from domain.
+- [] Create presentation folder inside each folder of app.
+- [] Create a generic Service to handle the repetead http requests.
+- [] Delete `api-routes.ts` file from `src/core/domain/api-routes.ts`

@@ -63,6 +63,7 @@ export class RequestResponse<R> {
     return statusCode >= 200 && statusCode <= 299;
   }
 
+  // TODO: Fix the error handle in the application
   private static errorTypeInvalidTokenError(type: HttpErrorsType): boolean {
     return type === HttpErrorsType.INVALID_TOKEN;
   }

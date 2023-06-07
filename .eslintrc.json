@@ -31,14 +31,12 @@
       "error",
       { "trailingComma": "none", "singleQuote": true, "jsxSingleQuote": true }
     ],
-    "no-unused-vars": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
       { "argsIgnorePattern": "^_" }
     ],
     "@typescript-eslint/no-invalid-void-type": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    // "@typescript-eslint/no-unnecessary-type-assertion": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/no-floating-promises": "off",

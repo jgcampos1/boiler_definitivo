@@ -168,9 +168,10 @@ The project use the following `libs`:
 
 - [x] Remove all `index.ts` files.
 - [x] Remove entities from domain. (Está certo, é algo que salvamos no storage, entity é tudo que salvamos em banco de dados)
-- [] Create presentation folder inside each folder of app.
+- [x] Create presentation folder inside each folder of app.
 - [] Create a generic Service to handle the repetead http requests.
 - [] Delete `api-routes.ts` file from `src/core/domain/api-routes.ts`
 - [] Add all texts to translation files
 - [] Create the themes light and dark of the app.
 - [] Fix the colors of the app with figma tokens.
+- [] Review the header and the auth header.

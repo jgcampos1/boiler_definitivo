@@ -1,4 +1,4 @@
-import { HttpErrorsType } from '../../application/protocols';
+import { HttpErrorsType } from '../../application/protocols/http-client';
 import { type DomainException } from './domain-exception';
 
 export class AccountNotConfirmedException implements DomainException {

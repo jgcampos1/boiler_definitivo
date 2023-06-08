@@ -1,5 +1,5 @@
 import { Typography, styled } from '@mui/material';
-import { includesForwardProps } from '~/app/presentation/common/helpers';
+import { includesForwardProps } from '~/app/presentation/common/helpers/includes-forward-props';
 
 type Props = {
   colorType: string | 'primary';

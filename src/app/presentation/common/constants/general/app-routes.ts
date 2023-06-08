@@ -2,7 +2,7 @@ import { ParamParseKey } from 'react-router';
 import { generatePath } from 'react-router-dom';
 
 import { RoutesConfig } from '~/app/main/config/routes-config';
-import { ROUTES } from '~/app/main/types';
+import { ROUTES } from '~/app/main/types/routes-enum';
 
 type AppRouteType = {
   [key in ROUTES]: {

@@ -1,6 +1,6 @@
-import { cacheStorage } from '~/app/core/infra';
+import { cacheStorage } from '~/app/core/infra/cache';
 
-import { AUTH_STORAGE_TOKENS } from '../domain/entities';
+import { AUTH_STORAGE_TOKENS } from '../domain/entities/auth-tokens';
 import { TokenModel } from '../domain/models/toke-model';
 
 export const authSliceName = 'authSlice' as const;

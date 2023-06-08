@@ -7,13 +7,16 @@ import {
   useResetPasswordMutation,
   useSendConfirmationEmailMutation
 } from '~/app/application/auth/store/hooks';
-import { HttpErrorsType } from '~/app/core/application/protocols';
+import { HttpErrorsType } from '~/app/core/application/protocols/http-client';
 import { tokenDecoder } from '~/app/core/infra/decoder/jwt-token-decoder';
-import { ROUTES } from '~/app/main/types';
+import { ROUTES } from '~/app/main/types/routes-enum';
 
-import { ToastType } from '../../common/types';
+import { ToastType } from '../../common/types/toast-types';
 import { ArrowPrev } from '../../components';
-import { useQuery, useToast, useToastAlert, useToggle } from '../../hooks';
+import { useQuery } from '../../hooks/use-query';
+import { useToast } from '../../hooks/use-toast';
+import { useToastAlert } from '../../hooks/use-toast-alert';
+import { useToggle } from '../../hooks/use-toggle';
 import FormPasswordLogin from './form-reset-password/form-reset-password';
 import { ResetPasswordFormValidation } from './form-reset-password/form-validation';
 import {

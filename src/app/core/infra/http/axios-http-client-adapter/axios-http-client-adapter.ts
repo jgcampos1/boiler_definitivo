@@ -1,10 +1,10 @@
 import axios, { type AxiosInstance } from 'axios';
-import type {
+import {
   HttpClient,
+  HttpError,
   HttpRequest,
-  HttpResponse,
-  HttpError
-} from '~/app/core/application/protocols';
+  HttpResponse
+} from '~/app/core/application/protocols/http-client';
 import { APP_ENV } from '~/env';
 
 export class AxiosHttpClientAdapter implements HttpClient {

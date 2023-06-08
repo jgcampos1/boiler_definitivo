@@ -5,14 +5,15 @@ import {
   useConfirmationTokenMutation,
   useSendConfirmationEmailMutation
 } from '~/app/application/auth/store/hooks';
-import { HttpErrorsType } from '~/app/core/application/protocols';
+import { HttpErrorsType } from '~/app/core/application/protocols/http-client';
 import { tokenDecoder } from '~/app/core/infra/decoder/jwt-token-decoder';
-import { ROUTES } from '~/app/main/types';
+import { ROUTES } from '~/app/main/types/routes-enum';
 import { FullPageLoading } from '~/app/presentation/components';
 
-import { ToastType } from '../../common/types';
+import { ToastType } from '../../common/types/toast-types';
 import { LogoSkyTech } from '../../components/icons/';
-import { useQuery, useToast } from '../../hooks';
+import { useQuery } from '../../hooks/use-query';
+import { useToast } from '../../hooks/use-toast';
 import { Button, Container, Content, Text } from './confirmation-token-styles';
 
 const ConfirmationToken = () => {

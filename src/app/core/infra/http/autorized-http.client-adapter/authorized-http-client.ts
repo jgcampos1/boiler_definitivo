@@ -1,9 +1,9 @@
-import { AUTH_STORAGE_TOKENS } from '~/app/application/auth/domain/entities';
+import { AUTH_STORAGE_TOKENS } from '~/app/application/auth/domain/entities/auth-tokens';
 import {
   HttpClient,
   HttpRequest,
   HttpResponse
-} from '~/app/core/application/protocols';
+} from '~/app/core/application/protocols/http-client';
 
 import { cacheStorage } from '../../cache';
 

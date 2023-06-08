@@ -1,9 +1,9 @@
 import { useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router';
 
-import { useLazyGetUserProfileQuery } from '~/app/application/user/store';
-import { ROUTES } from '~/app/main/types';
-import { useAuth } from '~/app/presentation/hooks';
+import { useLazyGetUserProfileQuery } from '~/app/application/user/store/hooks';
+import { ROUTES } from '~/app/main/types/routes-enum';
+import { useAuth } from '~/app/presentation/hooks/use-auth';
 import { theme } from '~/app/presentation/styles/theme';
 
 import { EyeVisibilityIcon, LogoutIcon, MoreOption } from '../../';

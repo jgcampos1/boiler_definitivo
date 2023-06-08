@@ -1,11 +1,11 @@
-import { FormProvider } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 
-import { RegisterForm } from '~/app/application/auth/domain/models';
+import { RegisterForm } from '~/app/application/auth/domain/models/register-models';
 import { useRegisterMutation } from '~/app/application/auth/store/hooks';
-import { ROUTES } from '~/app/main/types';
+import { ROUTES } from '~/app/main/types/routes-enum';
 
-import { useForm, useToastAlert } from '../../hooks';
+import { useToastAlert } from '../../hooks/use-toast-alert';
 import FormRegister from './form-register/form-register';
 
 const Register = () => {

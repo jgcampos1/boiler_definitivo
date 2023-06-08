@@ -1,20 +1,24 @@
-import {
-  emailLoginService,
-  tokenLogoutService,
-  resetPasswordService,
-  registerService,
-  confirmationTokenService,
-  sendConfirmationService,
-  type EmailLogin,
-  type TokenLogout,
-  type PasswordReset,
-  type Register,
-  type ConfirmationToken,
-  type SendConfirmationEmail,
-  type RecoveryPassword,
-  recoveryPasswordService
-} from '~/app/application/auth/services';
 import { apiSlice } from '~/app/core/store/apiSlice';
+
+import {
+  ConfirmationToken,
+  confirmationTokenService
+} from '../services/confirmation-token';
+import { EmailLogin, emailLoginService } from '../services/email-login';
+import {
+  PasswordReset,
+  resetPasswordService
+} from '../services/password-reset';
+import {
+  RecoveryPassword,
+  recoveryPasswordService
+} from '../services/recovery-password';
+import { Register, registerService } from '../services/register';
+import {
+  SendConfirmationEmail,
+  sendConfirmationService
+} from '../services/send-confirmation-email';
+import { TokenLogout, tokenLogoutService } from '../services/token-logout';
 
 export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({

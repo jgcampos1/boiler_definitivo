@@ -1,11 +1,5 @@
-import {
-  type HttpResponse,
-  HttpStatusCode,
-  HttpErrorsType
-} from '~/app/core/application/protocols';
 import { type ServiceCommand } from '~/app/core/domain/command/service-command';
 import { error, success } from '~/app/core/domain/either/either';
-import { UnexpectedError } from '~/app/core/domain/exceptions';
 
 import { AccountNotConfirmedException } from '../../domain/exceptions/account-not-confirmed-exception';
 import { DocumentAlreadyExistsException } from '../../domain/exceptions/document-already-exists-exception';
@@ -14,7 +8,13 @@ import { ExpirationTokenException } from '../../domain/exceptions/expiration-tok
 import { InvalidCredentialsException } from '../../domain/exceptions/invalid-credentials-exception';
 import { PhoneAlreadyExistsException } from '../../domain/exceptions/phone-already-exists-exception';
 import { InvalidTokenException } from '../../domain/exceptions/token-invalid-exception-';
+import { UnexpectedError } from '../../domain/exceptions/unexpected-error';
 import { UserAlreadyExistsException } from '../../domain/exceptions/user-already-exists-exception';
+import {
+  HttpErrorsType,
+  HttpResponse,
+  HttpStatusCode
+} from '../protocols/http-client';
 import {
   type CombinedPredicated,
   combinedPredicates

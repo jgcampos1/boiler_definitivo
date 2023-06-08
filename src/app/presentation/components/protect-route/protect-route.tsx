@@ -1,8 +1,10 @@
 import react from 'react';
 import { Navigate, type RouteProps } from 'react-router-dom';
 
-import { IRoute, ROUTES } from '~/app/main/types';
-import { useAuth } from '~/app/presentation/hooks';
+import { IRoute } from '~/app/main/types/route-types';
+import { ROUTES } from '~/app/main/types/routes-enum';
+
+import { useAuth } from '../../hooks/use-auth';
 
 type Props = RouteProps & {
   private: boolean;

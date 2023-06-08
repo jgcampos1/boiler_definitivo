@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 
 import { Link, Snackbar } from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
-import { ToastTypes } from '~/app/application/general/toast/types';
-import { useToast } from '~/app/presentation/hooks';
+import { ToastTypes } from '~/app/application/general/toast/types/toast-types';
+import { useToast } from '~/app/presentation/hooks/use-toast';
 
 import { useStyles } from './toast-styles';
 

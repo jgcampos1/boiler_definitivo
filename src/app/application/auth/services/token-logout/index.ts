@@ -1,9 +1,9 @@
 import { AUTH_API_ROUTES } from '~/app/application/auth/api/routes';
-import { AUTH_STORAGE_TOKENS } from '~/app/application/auth/domain/entities';
 import { type ServiceCommand } from '~/app/core/domain/command/service-command';
-import { cacheStorage } from '~/app/core/infra';
+import { cacheStorage } from '~/app/core/infra/cache';
 import { httpClient } from '~/app/core/infra/http/axios-http-client-adapter';
 
+import { AUTH_STORAGE_TOKENS } from '../../domain/entities/auth-tokens';
 import { TokenLogout } from './token-logout';
 
 export const tokenLogoutService: ServiceCommand<TokenLogout.Response> =

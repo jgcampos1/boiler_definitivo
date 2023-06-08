@@ -13,13 +13,13 @@ import {
 } from '@material-ui/core';
 import { Info, More } from '@mui/icons-material';
 import clsx from 'clsx';
-import { isEmpty } from '~/app/presentation/common/helpers';
-import { ValidationErrorType } from '~/app/presentation/common/protocols';
-import { OptionType } from '~/app/presentation/common/types';
-import { BaseButton } from '~/app/presentation/components';
 import {} from '~/app/presentation/components/icons';
-import { useTranslation } from '~/app/presentation/hooks';
 
+import { isEmpty } from '../../common/helpers/is-empty';
+import { ValidationErrorType } from '../../common/protocols/validation';
+import { OptionType } from '../../common/types/option-type';
+import { useTranslation } from '../../hooks/use-translation';
+import { BaseButton } from '../buttons';
 import { useStyles } from './select-input-styles';
 
 type Props = TextFieldProps & {

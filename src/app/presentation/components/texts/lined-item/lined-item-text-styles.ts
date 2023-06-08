@@ -1,5 +1,5 @@
 import { styled, Theme } from '@mui/material';
-import { includesForwardProps } from '~/app/presentation/common/helpers';
+import { includesForwardProps } from '~/app/presentation/common/helpers/includes-forward-props';
 import { TraceIcon } from '~/app/presentation/components/icons';
 
 type StyledProps = {

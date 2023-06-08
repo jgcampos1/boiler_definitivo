@@ -2,9 +2,9 @@ import { useCallback } from 'react';
 
 import { addToast } from '~/app/application/general/toast/actions/add-toast';
 import { removeToast } from '~/app/application/general/toast/actions/remove-toast';
-import { ToastTypes } from '~/app/application/general/toast/types';
+import { ToastTypes } from '~/app/application/general/toast/types/toast-types';
 
-import { ToastType } from '../common/types';
+import { ToastType } from '../common/types/toast-types';
 import { useAppDispatch } from './use-app-dispatch';
 import { useTranslation } from './use-translation';
 

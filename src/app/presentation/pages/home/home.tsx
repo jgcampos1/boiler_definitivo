@@ -1,5 +1,5 @@
 import { AuthorizationHeader, Header } from '../../components';
-import { useAuth } from '../../hooks';
+import { useAuth } from '../../hooks/use-auth';
 import { Container, Content } from './home-styles';
 
 const Home = () => {

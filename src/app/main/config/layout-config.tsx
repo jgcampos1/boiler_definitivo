@@ -1,8 +1,6 @@
-import {
-  DefaultLayout,
-  UnauthorizedLayout,
-  AuthFormLayout
-} from '~/app/presentation/layout';
+import AuthFormLayout from '~/app/presentation/layout/auth-form-layout/auth-form-layout';
+import DefaultLayout from '~/app/presentation/layout/default-layout/default-layout';
+import UnauthorizedLayout from '~/app/presentation/layout/unauthorized-layout/unauthorized-layout';
 
 export const LayoutConfig = {
   DefaultLayout: {

@@ -5,7 +5,7 @@ import {
   IconButton,
   TextInput
 } from '~/app/presentation/components';
-import { useToggle } from '~/app/presentation/hooks';
+import { useToggle } from '~/app/presentation/hooks/use-toggle';
 
 import {
   ButtonContainer,

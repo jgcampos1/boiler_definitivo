@@ -1,9 +1,9 @@
 import { apiSlice } from '~/app/core/store/apiSlice';
 
 import {
-  type GetUserProfile,
+  GetUserProfile,
   getUserProfileService
-} from '../application/services';
+} from '../application/services/get-user-profile';
 import {
   type UpdatePasswordUser,
   updatePasswordUserService

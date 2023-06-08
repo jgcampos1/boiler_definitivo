@@ -1,14 +1,14 @@
-import type { LoginForm } from '~/app/application/auth/domain/models';
-import { GetUserProfile } from '~/app/application/user/application/services';
+import { GetUserProfile } from '~/app/application/user/application/services/get-user-profile';
 import { RequestResponse } from '~/app/core/application/http-response/http-response';
-import type {
-  CacheStorage,
-  HttpClient
-} from '~/app/core/application/protocols';
-import { HttpMethod } from '~/app/core/application/protocols';
+import { CacheStorage } from '~/app/core/application/protocols/cache-storage';
+import {
+  HttpClient,
+  HttpMethod
+} from '~/app/core/application/protocols/http-client';
 import type { ServiceCommand } from '~/app/core/domain/command/service-command';
 import { error, success } from '~/app/core/domain/either/either';
 
+import { LoginForm } from '../../domain/models/login-models';
 import { TokenModel } from '../../domain/models/toke-model';
 
 export class EmailLogin implements ServiceCommand<EmailLogin.Response> {

@@ -1,11 +1,9 @@
 import { useMemo } from 'react';
 
-import { MaskOptions } from '~/app/presentation/common/types';
-import {
-  PhoneNumberMaskFormatter,
-  CepMaskFormatter,
-  DocumentFormatter
-} from '~/app/presentation/infra/formatter';
+import { MaskOptions } from '../common/types/mask-options-type';
+import { CepMaskFormatter } from '../infra/formatter/cep-mask-formatter';
+import { DocumentFormatter } from '../infra/formatter/document-mask-formatter';
+import { PhoneNumberMaskFormatter } from '../infra/formatter/phone-number-mask-formatter';
 
 export const useMaskFormatter = (mask: MaskOptions | undefined) => {
   if (!mask) {

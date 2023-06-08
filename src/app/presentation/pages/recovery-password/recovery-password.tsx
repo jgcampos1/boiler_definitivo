@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRecoveryPasswordMutation } from '~/app/application/auth/store/hooks';
-import { ROUTES } from '~/app/main/types';
+import { ROUTES } from '~/app/main/types/routes-enum';
 
 import { ArrowPrev, LogoSkyTech } from '../../components';
-import { useToastAlert } from '../../hooks';
+import { useToastAlert } from '../../hooks/use-toast-alert';
 import FormLogin from './form-recovery-password/form-recovery-password';
 import { FormRecoveryPasswordValidationSchema } from './form-recovery-password/form-validation';
 import {

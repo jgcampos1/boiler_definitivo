@@ -3,8 +3,10 @@ import { getToastState } from '~/app/application/general/toast/selectors/toast-s
 import { userState } from '~/app/application/user/store/selectors';
 import { useAppSelector } from '~/app/core/store/store';
 
-export const Auth = () => useAppSelector(authState);
+const Auth = () => useAppSelector(authState);
 
-export const Toast = () => useAppSelector(getToastState);
+const Toast = () => useAppSelector(getToastState);
 
-export const User = () => useAppSelector(userState);
+const User = () => useAppSelector(userState);
+
+export const useSelectors = { Auth, Toast, User };

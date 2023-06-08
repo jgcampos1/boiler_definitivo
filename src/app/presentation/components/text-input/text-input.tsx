@@ -12,10 +12,11 @@ import {
 } from '@material-ui/core';
 import { Info } from '@mui/icons-material';
 import clsx from 'clsx';
-import { ValidationErrorType } from '~/app/presentation/common/protocols';
-import { MaskOptions } from '~/app/presentation/common/types';
-import { useTranslation, useMaskFormatter } from '~/app/presentation/hooks';
 
+import { ValidationErrorType } from '../../common/protocols/validation';
+import { MaskOptions } from '../../common/types/mask-options-type';
+import { useMaskFormatter } from '../../hooks/use-mask-formatter';
+import { useTranslation } from '../../hooks/use-translation';
 import { useStyles } from './text-input-styles';
 
 export type TextInputProps = Omit<

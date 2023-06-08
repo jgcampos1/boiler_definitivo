@@ -1,5 +1,5 @@
 import { SliceCaseReducers } from '@reduxjs/toolkit';
-import { createHydratedSlice } from '~/app/core/store/adapters';
+import { createHydratedSlice } from '~/app/core/store/adapters/create-hydrated-slice';
 
 import { userDataReducer } from '../actions/user-data';
 import {

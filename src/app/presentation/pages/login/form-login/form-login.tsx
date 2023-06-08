@@ -1,6 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 
-import { ROUTES } from '~/app/main/types';
+import { ROUTES } from '~/app/main/types/routes-enum';
 import {
   ArrowPrev,
   IconButton,
@@ -8,7 +8,7 @@ import {
 } from '~/app/presentation/components';
 import { EyePasswordIcon } from '~/app/presentation/components/icons/eye-password-icon';
 import TextInput from '~/app/presentation/components/text-input/text-input';
-import { useToggle } from '~/app/presentation/hooks';
+import { useToggle } from '~/app/presentation/hooks/use-toggle';
 
 import {
   BackPageButton,

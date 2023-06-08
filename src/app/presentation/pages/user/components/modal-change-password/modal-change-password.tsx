@@ -1,9 +1,9 @@
 import { FormProvider, useForm } from 'react-hook-form';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useUpdatePasswordUserMutation } from '~/app/application/user/store';
+import { useUpdatePasswordUserMutation } from '~/app/application/user/store/hooks';
 import { Modal } from '~/app/presentation/components';
-import { useToastAlert } from '~/app/presentation/hooks';
+import { useToastAlert } from '~/app/presentation/hooks/use-toast-alert';
 
 import FormChangePassword from './components/form-change-password/form-change-password';
 import { ChangePasswordFormValidation } from './components/form-change-password/form-validation';

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { useSelectors } from '../../hooks';
-import { Toast } from './components';
+import { useSelectors } from '../../hooks/use-selectors';
+import Toast from './components/toast/toast';
 import { useStyles } from './toast-container-styles';
 
 const ToastContainer = () => {

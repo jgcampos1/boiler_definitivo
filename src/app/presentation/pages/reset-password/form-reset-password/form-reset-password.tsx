@@ -3,7 +3,7 @@ import { useFormContext } from 'react-hook-form';
 import { IconButton } from '~/app/presentation/components';
 import { EyePasswordIcon } from '~/app/presentation/components/icons/eye-password-icon';
 import TextInput from '~/app/presentation/components/text-input/text-input';
-import { useToggle } from '~/app/presentation/hooks';
+import { useToggle } from '~/app/presentation/hooks/use-toggle';
 
 import { Button, FormContainer } from './form-reset-password-styles';
 

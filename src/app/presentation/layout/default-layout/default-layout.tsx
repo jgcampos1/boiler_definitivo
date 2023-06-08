@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { AuthorizationHeader } from '../../components';
 import MenuGlobal from '../../components/menu-global/menu-global';
-import { useDeviceSizes } from '../../hooks';
+import { useDeviceSizes } from '../../hooks/use-device-sizes';
 import { Container, Content, MenuContent } from './default-layout-styles';
 
 type Props = {

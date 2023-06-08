@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { AddressModel } from '~/app/application/general/domain/address-model';
 import { useLazyAddressInfoQuery } from '~/app/application/general/store/hooks';
 
-import { MaskOptionsEnum } from '../../common/enums';
-import { useDebounce } from '../../hooks';
+import { MaskOptionsEnum } from '../../common/enums/mask-enum';
+import { useDebounce } from '../../hooks/use-debounce';
 import TextInput from '../text-input/text-input';
 import { TextInputProps } from '../text-input/text-input';
 

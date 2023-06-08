@@ -1,6 +1,8 @@
 import { RequestResponse } from '~/app/core/application/http-response/http-response';
-import type { HttpClient } from '~/app/core/application/protocols';
-import { HttpMethod } from '~/app/core/application/protocols';
+import {
+  HttpClient,
+  HttpMethod
+} from '~/app/core/application/protocols/http-client';
 import { type ServiceCommand } from '~/app/core/domain/command/service-command';
 import { error, success } from '~/app/core/domain/either/either';
 

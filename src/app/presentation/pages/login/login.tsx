@@ -3,17 +3,18 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { LoginForm } from '~/app/application/auth/domain/models';
+import { LoginForm } from '~/app/application/auth/domain/models/login-models';
 import {
   useEmailLoginMutation,
   useSendConfirmationEmailMutation
 } from '~/app/application/auth/store/hooks';
-import { HttpErrorsType } from '~/app/core/application/protocols';
-import { ROUTES } from '~/app/main/types';
+import { HttpErrorsType } from '~/app/core/application/protocols/http-client';
+import { ROUTES } from '~/app/main/types/routes-enum';
 
-import { ToastType } from '../../common/types';
+import { ToastType } from '../../common/types/toast-types';
 import { LogoSkyTech, TextButton } from '../../components';
-import { useAuth, useToast } from '../../hooks';
+import { useAuth } from '../../hooks/use-auth';
+import { useToast } from '../../hooks/use-toast';
 import FormLogin from './form-login/form-login';
 import { LoginFormValidationSchema } from './form-login/form-validation';
 import { Button, Container, Content, Text } from './login-styles';

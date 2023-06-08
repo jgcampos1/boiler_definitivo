@@ -10,10 +10,10 @@ import { authReducer } from '~/app/application/auth/store/reducer';
 import { authSlice } from '~/app/application/auth/store/slice/auth-slice';
 import { authSliceName } from '~/app/application/auth/store/types';
 import { ToastSlice } from '~/app/application/general/toast/slice/toast-slice';
-import { toastSliceName } from '~/app/application/general/toast/types';
-import { userSliceName } from '~/app/application/user/store';
+import { toastSliceName } from '~/app/application/general/toast/types/toast-constants';
 import { userReducer } from '~/app/application/user/store/reducer';
 import { userSlice } from '~/app/application/user/store/slice/user-slice';
+import { userSliceName } from '~/app/application/user/store/types';
 import { apiSlice } from '~/app/core/store/apiSlice';
 
 import { type AppDispatch as AppDispatchTypes, type RootState } from './types';

@@ -9,7 +9,7 @@ import ToastContainer from '~/app/presentation/components/toast-container/toast-
 import { theme } from '~/app/presentation/styles/theme';
 
 import { RoutesConfig } from '../config/routes-config';
-import { makeRoutes } from '../factories/routes';
+import { makeRoutes } from '../factories/routes/routes-factory';
 
 const Router = () => {
   return (

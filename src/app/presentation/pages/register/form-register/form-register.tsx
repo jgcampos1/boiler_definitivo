@@ -1,6 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 
-import { MaskOptionsEnum } from '~/app/presentation/common/enums';
+import { MaskOptionsEnum } from '~/app/presentation/common/enums/mask-enum';
 import {
   ArrowPrev,
   IconButton,
@@ -9,7 +9,7 @@ import {
 } from '~/app/presentation/components';
 import { EyePasswordIcon } from '~/app/presentation/components/icons/eye-password-icon';
 import TextInput from '~/app/presentation/components/text-input/text-input';
-import { useToggle } from '~/app/presentation/hooks';
+import { useToggle } from '~/app/presentation/hooks/use-toggle';
 
 import {
   BoxLogo,

@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import { AUTH_STORAGE_TOKENS } from '~/app/application/auth/domain/entities';
+import { AUTH_STORAGE_TOKENS } from '~/app/application/auth/domain/entities/auth-tokens';
 import { UserAuthModel } from '~/app/application/auth/domain/models/user-auth-model';
 import { decoderLoginService } from '~/app/application/auth/services/decoder-user-token';
 import { setToken } from '~/app/application/auth/store/actions/set-token';
 import { USER_STORAGE_TOKENS } from '~/app/application/user/domain/entities/user-tokens';
-import { cacheStorage } from '~/app/core/infra';
-import { ROUTES } from '~/app/main/types';
+import { cacheStorage } from '~/app/core/infra/cache';
+import { ROUTES } from '~/app/main/types/routes-enum';
 import { APP_ENV } from '~/env';
 
 import { useAppDispatch } from './use-app-dispatch';

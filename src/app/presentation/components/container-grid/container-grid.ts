@@ -1,6 +1,6 @@
 import { Box, styled } from '@mui/material';
 
-import { includesForwardProps } from '../../common/helpers';
+import { includesForwardProps } from '../../common/helpers/includes-forward-props';
 
 interface Props {
   background?: string;

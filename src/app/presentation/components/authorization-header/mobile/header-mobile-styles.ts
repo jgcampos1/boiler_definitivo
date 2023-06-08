@@ -47,7 +47,8 @@ export const Container = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   alignItems: 'center',
   height: '100%',
-  padding: theme.spacing(5)
+  padding: theme.spacing(5),
+  background: theme.palette.primary.main
 }));
 export const ButtonBox = styled(Box)(({ theme }) => ({
   display: 'flex',

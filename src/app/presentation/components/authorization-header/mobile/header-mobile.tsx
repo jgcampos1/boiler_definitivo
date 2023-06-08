@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import { IconButton } from '@mui/material';
 import { ITEM_MENU } from '~/app/presentation/common/constants/general/items-menu';
 import {
   LogoSkyTechWhite,
@@ -8,6 +7,7 @@ import {
   CloseIcon
 } from '~/app/presentation/components';
 
+import { IconButtonStyles } from '../../header/mobile/header-mobile-styles';
 import { HeaderActions } from '../actions/header-actions';
 import {
   LogoContainer,
@@ -24,7 +24,7 @@ const HeaderMobile = () => {
   return (
     <HeaderContainerMobile>
       <LogoSkyTechWhite />
-      <IconButton
+      <IconButtonStyles
         icon={<MenuIcon />}
         onClick={() => {
           setOpenMenu(true);
@@ -40,7 +40,7 @@ const HeaderMobile = () => {
       >
         <Container>
           <LogoContainer>
-            <IconButton
+            <IconButtonStyles
               icon={<CloseIcon />}
               onClick={() => {
                 setOpenMenu(false);

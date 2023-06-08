@@ -7,13 +7,14 @@ export const Home = loadable(
   }
 );
 export const Register = loadable(
-  async () => import('~/app/presentation/pages/register/register'),
+  async () =>
+    import('~/app/application/auth/presentation/pages/register/register'),
   {
     resolveComponent: (components) => components.default
   }
 );
 export const Login = loadable(
-  async () => import('~/app/presentation/pages/login/login'),
+  async () => import('~/app/application/auth/presentation/pages/login/login'),
   {
     resolveComponent: (components) => components.default
   }
@@ -29,14 +30,19 @@ export const ConfirmationToken = loadable(
 );
 export const RecoveryPassword = loadable(
   async () =>
-    import('~/app/presentation/pages/recovery-password/recovery-password'),
+    import(
+      '~/app/application/auth/presentation/pages/recovery-password/recovery-password'
+    ),
   {
     resolveComponent: (components) => components.default
   }
 );
 
 export const ResetPassword = loadable(
-  async () => import('~/app/presentation/pages/reset-password/reset-password'),
+  async () =>
+    import(
+      '~/app/application/auth/presentation/pages/reset-password/reset-password'
+    ),
   {
     resolveComponent: (components) => components.default
   }
@@ -49,7 +55,7 @@ export const Dashboard = loadable(
   }
 );
 export const User = loadable(
-  async () => import('~/app/presentation/pages/user/user'),
+  async () => import('~/app/application/user/presentation/pages/user/user'),
   {
     resolveComponent: (components) => components.default
   }

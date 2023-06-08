@@ -1,4 +1,4 @@
-import { AuthorizationHeader, Header } from '../../components';
+import { AuthorizationHeader } from '../../components';
 import { useAuth } from '../../hooks/use-auth';
 import { Container, Content } from './home-styles';
 
@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <Container>
-      {isAuthenticated ? <AuthorizationHeader /> : <Header />}
+      {isAuthenticated ? <AuthorizationHeader /> : <AuthorizationHeader />}
       <Content>
         <h1>Home Page</h1>
       </Content>

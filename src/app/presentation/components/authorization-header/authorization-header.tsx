@@ -1,4 +1,5 @@
-import { useDeviceSizes } from '../../hooks/use-device-sizes';
+import { useDeviceSizes } from '~/app/presentation/hooks/use-device-sizes';
+
 import HeaderDesktop from './desktop/header-desktop';
 import HeaderMobile from './mobile/header-mobile';
 

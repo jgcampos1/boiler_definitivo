@@ -1,5 +1,5 @@
 import { Box, styled, Typography } from '@mui/material';
-import { ProfileIcon } from '~/app/presentation/components';
+import { ProfileIcon } from '~/app/presentation/components/';
 import MoreOptionMenuItem from '~/app/presentation/components/more-option-menu-item/more-option-menu-item';
 
 export const Container = styled(Box)(() => ({

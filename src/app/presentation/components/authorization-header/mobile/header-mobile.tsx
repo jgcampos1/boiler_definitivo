@@ -1,9 +1,13 @@
 import { useState } from 'react';
 
+import { IconButton } from '@mui/material';
 import { ITEM_MENU } from '~/app/presentation/common/constants/general/items-menu';
+import {
+  LogoSkyTechWhite,
+  MenuIcon,
+  CloseIcon
+} from '~/app/presentation/components';
 
-import { IconButton } from '../../buttons';
-import { CloseIcon, LogoSkyTechWhite, MenuIcon } from '../../icons';
 import { HeaderActions } from '../actions/header-actions';
 import {
   LogoContainer,

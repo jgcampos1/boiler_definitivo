@@ -1,7 +1,10 @@
 import { ContainerGrid, LogoSkyTechWhite } from '~/app/presentation/components';
+import { HeaderContainer } from '~/app/presentation/components/authorization-header/desktop/header-desktop-styles';
+import { Content } from '~/app/presentation/layout/default-layout/default-layout-styles';
 
 import { HeaderActions } from '../actions/header-actions';
-import { HeaderContainer, Container, Content } from './header-desktop-styles';
+import { Container } from '../actions/header-actions-styles';
+
 const HeaderDesktop = () => {
   return (
     <HeaderContainer>

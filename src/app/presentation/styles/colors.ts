@@ -1,8 +1,8 @@
 import styleJson from './tokens.json';
 
 export const Colors = {
-  Primary: styleJson.core.neutral[800].value,
-  Secondary: styleJson.core.neutral[600].value,
+  Primary: styleJson.core.neutral[800],
+  Secondary: styleJson.core.neutral[600],
   Blue1Additional: '#DFDFFC',
   FontHeader: '#222755',
   BlueGray: '#555f91',

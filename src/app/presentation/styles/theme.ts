@@ -2,6 +2,7 @@ import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 import { createTheme } from '@mui/material';
 
 import Colors from './colors';
+import styleJson from './tokens.json';
 
 const { typography } = createTheme();
 const breakpoints = createBreakpoints({});
@@ -28,38 +29,18 @@ export const theme = createTheme({
     divider: Colors.GrayLine
   },
   typography: {
-    fontFamily: "'Soleil', sans serif",
-    htmlFontSize: 16,
+    fontFamily: styleJson.fontFamilies.brinnan,
+    fontSize: Number(styleJson.fontSize[1]),
     [breakpoints.up('md')]: {
-      htmlFontSize: 14
+      htmlFontSize: Number(styleJson.fontSize[0])
     },
-
-    h1: {
-      fontSize: typography.pxToRem(40),
-      fontWeight: 600
-    },
-    h2: {
-      fontSize: typography.pxToRem(25),
-      fontWeight: 600
-    },
-    h3: {
-      fontSize: typography.pxToRem(20),
-      fontWeight: 600
-    },
-    subtitle1: {
-      fontSize: typography.pxToRem(16),
-      fontWeight: 600
-    },
-    body1: {
-      fontSize: typography.pxToRem(16)
-    },
-    body2: {
-      fontSize: typography.pxToRem(14)
-    },
+    ...styleJson.core,
+    // TODO: implemnent caption in design system
     caption: {
       fontSize: typography.pxToRem(14),
       fontWeight: 600
     },
+    // TODO implement button in design system
     button: {
       fontSize: typography.pxToRem(16)
     }

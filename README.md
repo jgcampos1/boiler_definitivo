@@ -169,7 +169,7 @@ The project use the following `libs`:
 - [x] Remove all `index.ts` files.
 - [x] Remove entities from domain. (Está certo, é algo que salvamos no storage, entity é tudo que salvamos em banco de dados)
 - [x] Create presentation folder inside each folder of app.
-- [] Create a generic Service to handle the repetead http requests.
+- [x] Create a generic Service to handle the repetead http requests.
 - [] Delete `api-routes.ts` file from `src/core/domain/api-routes.ts`
 - [] Add all texts to translation files
 - [] Create the themes light and dark of the app.

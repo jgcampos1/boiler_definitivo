@@ -11,6 +11,7 @@ import { error, success } from '~/app/core/domain/either/either';
 import { LoginForm } from '../../domain/models/login-models';
 import { TokenModel } from '../../domain/models/toke-model';
 
+// TODO review this service, we can move the logic to set the local storage to another part of the code.
 export class EmailLogin implements ServiceCommand<EmailLogin.Response> {
   constructor(
     private readonly httpClient: HttpClient<EmailLogin.Response>,

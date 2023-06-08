@@ -1,4 +1,4 @@
-import { OptionType } from '~/app/presentation/common/types';
+import { OptionType } from '../types/option-type';
 
 export const getOptions = (
   options: Array<{

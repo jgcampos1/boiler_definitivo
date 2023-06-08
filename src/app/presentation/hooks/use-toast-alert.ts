@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 
-import { ToastType } from '~/app/presentation/common/types';
 import { useToast } from '~/app/presentation/hooks/use-toast';
 import { useTranslation } from '~/app/presentation/hooks/use-translation';
+
+import { ToastType } from '../common/types/toast-types';
 
 interface ApiStatusResponse {
   error?: unknown;

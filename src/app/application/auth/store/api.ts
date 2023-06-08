@@ -3,23 +3,27 @@ import { apiSlice } from '~/app/core/store/apiSlice';
 import {
   ConfirmationToken,
   confirmationTokenService
-} from '../services/confirmation-token';
+} from '../services/confirmation-token/confirmation-token.service';
 import { EmailLogin, emailLoginService } from '../services/email-login';
 import {
   PasswordReset,
   resetPasswordService
-} from '../services/password-reset';
+} from '../services/password-reset/password-reset.service';
 import {
   RecoveryPassword,
   recoveryPasswordService
-} from '../services/recovery-password';
-import { Register, registerService } from '../services/register';
+} from '../services/recovery-password/recovery-password.service';
+import {
+  Register,
+  registerService
+} from '../services/register/register.service';
 import {
   SendConfirmationEmail,
   sendConfirmationService
-} from '../services/send-confirmation-email';
+} from '../services/send-confirmation-email/send-confirmation.service';
 import { TokenLogout, tokenLogoutService } from '../services/token-logout';
 
+// TODO Refactor this and get from list
 export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     register: builder.mutation<Register.Response, Register.Params>({

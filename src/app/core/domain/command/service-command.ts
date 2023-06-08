@@ -1,5 +1,5 @@
 import { type Either } from '~/app/core/domain/either/either';
-import { type DomainException } from '~/app/core/domain/exceptions';
+import { type DomainException } from '~/app/core/domain/exceptions/domain-exception';
 
 export interface ServiceCommand<R = any, T = any> {
   execute: (params: T) => Promise<ServiceCommand.Response<R>>;

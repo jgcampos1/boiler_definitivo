@@ -7,6 +7,7 @@ import {
 import { type ServiceCommand } from '~/app/core/domain/command/service-command';
 import { error, success } from '~/app/core/domain/either/either';
 
+// TODO review this service, we can move the logic to set the local storage to another part of the code.
 export class TokenLogout implements ServiceCommand<TokenLogout.Response> {
   constructor(
     private readonly httpClient: HttpClient<TokenLogout.Response>,

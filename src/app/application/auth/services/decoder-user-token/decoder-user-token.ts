@@ -13,18 +13,22 @@ export class LocalDecodeUserToken implements DecodeUserToken {
     if (!token) {
       throw new Error('Token not provided.');
     }
-    const { exp, id, email } = this.tokenDecoder.decode<{
-      exp: number;
-      id: string;
-      email: string;
-    }>(token);
+    try {
+      const { exp, id, email } = this.tokenDecoder.decode<{
+        exp: number;
+        id: string;
+        email: string;
+      }>(token);
 
-    return {
-      accessToken: token,
-      expiresIn: exp,
-      id,
-      email
-    };
+      return {
+        accessToken: token,
+        expiresIn: exp,
+        id,
+        email
+      };
+    } catch (error) {
+      throw new Error('Invalid token.');
+    }
   }
 }
 

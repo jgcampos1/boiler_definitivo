@@ -1,4 +1,4 @@
-import { AUTH_STORAGE_TOKENS } from '~/app/application/auth/domain/entities/auth-tokens';
+import { AUTH_STORAGE_TOKENS } from '~/app/application/features/auth/domain/entities/auth-tokens';
 import {
   HttpClient,
   HttpRequest,

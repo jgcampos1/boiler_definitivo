@@ -3,12 +3,12 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
+import { FullPageLoading } from '~/app/application/shared/components';
+import ToastContainer from '~/app/application/shared/components/toast-container/toast-container';
+import { theme } from '~/app/application/shared/styles/theme';
 import { store } from '~/app/core/store/store';
-import { FullPageLoading } from '~/app/presentation/components';
-import ToastContainer from '~/app/presentation/components/toast-container/toast-container';
-import { theme } from '~/app/presentation/styles/theme';
 
-import { RoutesConfig } from '../config/routes-config';
+import { appRoutes } from '../config/routes-config';
 import { makeRoutes } from '../factories/routes/routes-factory';
 
 const Router = () => {
@@ -19,7 +19,7 @@ const Router = () => {
           <BrowserRouter>
             <CssBaseline />
             <ToastContainer />
-            {makeRoutes(RoutesConfig)}
+            {makeRoutes(appRoutes)}
           </BrowserRouter>
         </ThemeProvider>
       </Provider>

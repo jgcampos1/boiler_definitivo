@@ -1,9 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 
+import { ProtectRoute } from '~/app/application/shared/components';
 import { LayoutConfig } from '~/app/main/config/layout-config';
-import { ProtectRoute } from '~/app/presentation/components';
-
-import { type IRoute } from '../../types';
+import { type IRoute } from '~/app/main/types/route-types';
 
 export const makeRoutes = (routes: IRoute[]) => {
   return routes.map((route) => {

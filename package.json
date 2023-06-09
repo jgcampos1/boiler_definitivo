@@ -12,7 +12,8 @@
     "lint:fix": "eslint --fix --ext .js,.tsx .",
     "check-types": "tsc",
     "pre-commit": "yarn check-types && yarn lint-staged",
-    "pre-push": "yarn check-types"
+    "pre-push": "yarn check-types",
+    "generate-style":"node build-output.js"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",

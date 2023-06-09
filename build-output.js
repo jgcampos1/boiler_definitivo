@@ -7,7 +7,7 @@ const sd = StyleDictionary.extend({
   source: ['./tokens/tokens.json'],
   platforms: {
     json: {
-      buildPath: 'src/app/presentation/styles/',
+      buildPath: 'src/app/application/shared/styles/',
       files: [
         {
           destination: 'tokens.json',

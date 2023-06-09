@@ -1,6 +1,6 @@
 import { type BaseQueryFn } from '@reduxjs/toolkit/dist/query';
 import { type ServiceCommand } from '~/app/core/domain/command/service-command';
-import { type DomainException } from '~/app/core/domain/exceptions';
+import { type DomainException } from '~/app/core/domain/exceptions/domain-exception';
 
 const logError = (error: any) => {
   // eslint-disable-next-line no-console

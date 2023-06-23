@@ -6,21 +6,19 @@ import { ToastTypes } from '~/app/application/features/general/toast/types/toast
 
 import { ToastType } from '../common/types/toast-types';
 import { useAppDispatch } from './use-app-dispatch';
-import { useTranslation } from './use-translation';
 
 type PropsToast = {
   text: string;
   type: ToastTypes;
 };
 export const useToast = () => {
-  const { translate } = useTranslation();
   const dispatch = useAppDispatch();
 
   const addNewToast = useCallback(
     ({ text, type }: PropsToast) => {
       const toast = {
         type,
-        text: translate(text)
+        text: text
       };
 
       dispatch(addToast(toast));

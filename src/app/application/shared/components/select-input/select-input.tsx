@@ -17,7 +17,6 @@ import clsx from 'clsx';
 import { isEmpty } from '../../common/helpers/is-empty';
 import { ValidationErrorType } from '../../common/protocols/validation';
 import { OptionType } from '../../common/types/option-type';
-import { useTranslation } from '../../hooks/use-translation';
 import { BaseButton } from '../buttons';
 import { useStyles } from './select-input-styles';
 
@@ -77,8 +76,6 @@ const SelectInput = ({
   className,
   ...props
 }: Props) => {
-  const { translate } = useTranslation();
-
   const [hasValue, setHasValue] = useState(false);
 
   const classes = useStyles({
@@ -100,7 +97,6 @@ const SelectInput = ({
         const errorState = error as unknown as ValidationErrorType;
 
         const errorMessage = errorState?.name ?? errorState?.message ?? '';
-        const errorOption = errorState?.option;
         const value = field.value ?? '';
 
         useEffect(() => setHasValue(!!value), [value]);
@@ -123,9 +119,7 @@ const SelectInput = ({
           <FormControl variant='outlined' className={className} fullWidth>
             {label && (
               <Box display='flex'>
-                <Typography className={classes.fieldName}>
-                  {translate(label)}
-                </Typography>
+                <Typography className={classes.fieldName}>{label}</Typography>
                 {tooltip && (
                   <Tooltip className={classes.formControlTip} title={tooltip}>
                     <Info />
@@ -181,7 +175,7 @@ const SelectInput = ({
 
             {invalid && (
               <FormHelperText className={classes.errorHelperText}>
-                {translate(errorMessage, errorOption)}
+                {errorMessage}
               </FormHelperText>
             )}
             {isCustomError && (

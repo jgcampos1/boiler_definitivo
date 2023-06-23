@@ -34,7 +34,7 @@ export const HeaderActions = () => {
   }, [userAuth?.roles]);
   const username = user?.firstName || 'Usuário';
 
-  const redirectUserPage = () => navigate(`${ROUTES.USER}`);
+  const redirectUserPage = () => navigate(`${ROUTES.HOME}`);
 
   return (
     <Container>

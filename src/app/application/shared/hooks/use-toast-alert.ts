@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 
 import { useToast } from '~/app/application/shared/hooks/use-toast';
-import { useTranslation } from '~/app/application/shared/hooks/use-translation';
 
 import { ToastType } from '../common/types/toast-types';
 
@@ -23,7 +22,6 @@ export const useToastAlert = ({
   successMessage
 }: ApiStatusResponse) => {
   const { addToast } = useToast();
-  const { translate } = useTranslation();
 
   useEffect(() => {
     if (!isError || !error) return;
@@ -41,7 +39,7 @@ export const useToastAlert = ({
 
     addToast({
       type: ToastType.SUCCESS,
-      text: translate(successMessage)
+      text: successMessage
     });
 
     if (onSuccess) onSuccess?.();

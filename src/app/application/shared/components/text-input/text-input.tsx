@@ -16,7 +16,6 @@ import clsx from 'clsx';
 import { ValidationErrorType } from '../../common/protocols/validation';
 import { MaskOptions } from '../../common/types/mask-options-type';
 import { useMaskFormatter } from '../../hooks/use-mask-formatter';
-import { useTranslation } from '../../hooks/use-translation';
 import { useStyles } from './text-input-styles';
 
 export type TextInputProps = Omit<
@@ -87,7 +86,6 @@ const TextInput = ({
     inputWidth,
     isLabelBold
   });
-  const { translate } = useTranslation('');
 
   return (
     <Controller
@@ -99,7 +97,6 @@ const TextInput = ({
         const errorState = error as unknown as ValidationErrorType;
 
         const errorMessage = errorState?.name ?? errorState?.message ?? '';
-        const errorOption = errorState?.option;
         const value = field.value ?? '';
 
         const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -138,7 +135,7 @@ const TextInput = ({
             {label && (
               <Box display='flex' alignItems='center' mb={1}>
                 <Typography className={classes.fieldName}>
-                  {translate(label)}
+                  {label}
                   {badge && badge}
                 </Typography>
                 {tooltip && (
@@ -178,16 +175,14 @@ const TextInput = ({
                 [classes.paddingLeftSmallSymbol]: paddingLeftSmallSymbol
               })}
               helperText={
-                typeof helperText === 'string'
-                  ? translate(helperText)
-                  : helperText
+                typeof helperText === 'string' ? helperText : helperText
               }
               inputProps={{ 'aria-label': label, ...inputProps.inputProps }}
             />
 
             {invalid && (
               <FormHelperText className={classes.errorHelperText}>
-                {translate(errorMessage, errorOption)}
+                {errorMessage}
               </FormHelperText>
             )}
           </FormControl>

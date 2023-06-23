@@ -23,13 +23,13 @@ export const useAuth = () => {
   const tokenKeyUser = USER_STORAGE_TOKENS.USER_INFO;
 
   const returnToLogin = () => {
-    window.location.href = `${APP_ENV.APP_URL}${ROUTES.LOGIN}`;
+    window.location.href = `${APP_ENV.APP_URL}${ROUTES.HOME}`;
   };
 
   const logout = () => {
     cacheLocalStorage.set(tokenKey, '');
     cacheLocalStorage.set(tokenKeyUser, '');
-    window.location.href = `${APP_ENV.APP_URL}${ROUTES.LOGIN}`;
+    window.location.href = `${APP_ENV.APP_URL}${ROUTES.HOME}`;
   };
 
   const useLogin = (token?: string) => {

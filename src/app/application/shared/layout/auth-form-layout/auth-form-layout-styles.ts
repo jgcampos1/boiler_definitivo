@@ -24,7 +24,10 @@ export const Content = styled(Box)(() => ({
 export const ContainerForm = styled(Box)(() => ({
   flex: '1',
   height: '100%',
-  width: '100%'
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center'
 }));
 
 export const BackgroundImage = styled(Box)(() => ({
@@ -42,20 +45,20 @@ export const BoxTextBackground = styled(Typography)(() => ({
   left: '128px'
 }));
 
-export const TitleBackground = styled(Typography)(() => ({
-  fontFamily: 'Roboto',
+export const TitleBackground = styled(Typography)(({ theme }) => ({
   lineHeight: '60px',
+  fontFamily: 'Roboto',
   fontSize: '3.5625rem',
   fontWeight: '400',
-  color: '#fff'
+  color: theme.palette.common.white
 }));
 
-export const DescriptionBackground = styled(Typography)(() => ({
-  fontFamily: 'Roboto',
+export const DescriptionBackground = styled(Typography)(({ theme }) => ({
   lineHeight: '24px',
+  fontFamily: 'Roboto',
   fontWeight: '300',
   letterSpacing: '1px',
-  color: '#BDBDBD',
+  color: theme.palette.grey[400],
   width: '620px',
   textAlign: 'justify'
 }));

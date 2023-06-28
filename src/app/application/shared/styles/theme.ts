@@ -9,9 +9,6 @@ const breakpoints = createBreakpoints({});
 
 export const theme = createTheme({
   palette: {
-    primary: {
-      main: Colors.Primary
-    },
     secondary: {
       main: Colors.Secondary
     },
@@ -29,11 +26,12 @@ export const theme = createTheme({
     divider: Colors.GrayLine
   },
   typography: {
-    fontFamily: styleJson.fontFamilies.brinnan,
+    fontFamily: 'Roboto',
     fontSize: Number(styleJson.fontSize[1]),
     [breakpoints.up('md')]: {
       htmlFontSize: Number(styleJson.fontSize[0])
     },
+
     ...styleJson.core,
     // TODO: implemnent caption in design system
     caption: {

@@ -1,4 +1,3 @@
-import { GetUserProfile } from '~/app/application/features/user/application/services/get-user-profile';
 import { RequestResponse } from '~/app/core/application/http-response/http-response';
 import { CacheStorage } from '~/app/core/application/protocols/cache-storage';
 import {
@@ -17,7 +16,7 @@ export class EmailLogin implements ServiceCommand<EmailLogin.Response> {
     private readonly httpClient: HttpClient<EmailLogin.Response>,
     private readonly cacheStorage: CacheStorage,
     private readonly tokenKey: string,
-    private readonly tokenUserKey: string,
+    // private readonly tokenUserKey: string,
     private readonly url: string
   ) {}
 
@@ -37,13 +36,13 @@ export class EmailLogin implements ServiceCommand<EmailLogin.Response> {
     }
     const response = responseOrError.value.response;
 
-    const userProfileData: GetUserProfile.LocalStorageSystemInfo =
-      this.cacheStorage.get(this.tokenUserKey);
+    // const userProfileData: GetUserProfile.LocalStorageSystemInfo =
+    //   this.cacheStorage.get(this.tokenUserKey);
 
-    const { accessToken, ...user } = response;
-    this.cacheStorage.set(this.tokenKey, accessToken);
+    // const { accessToken, ...user } = response;
+    // this.cacheStorage.set(this.tokenKey, accessToken);
 
-    this.cacheStorage.set(this.tokenUserKey, { userProfileData, ...user });
+    // this.cacheStorage.set(this.tokenUserKey, { userProfileData, ...user });
 
     return success(response);
   }

@@ -1,11 +1,6 @@
 import { useState } from 'react';
 
 import { ITEM_MENU } from '~/app/application/shared/common/constants/general/items-menu';
-import {
-  LogoSkyTechWhite,
-  MenuIcon,
-  CloseIcon
-} from '~/app/application/shared/components';
 
 import { IconButtonStyles } from '../../header/mobile/header-mobile-styles';
 import { HeaderActions } from '../actions/header-actions';
@@ -23,14 +18,13 @@ const HeaderMobile = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
     <HeaderContainerMobile>
-      <LogoSkyTechWhite />
+      logo
       <IconButtonStyles
-        icon={<MenuIcon />}
+        icon={<>menu</>}
         onClick={() => {
           setOpenMenu(true);
         }}
       />
-
       <CustomDrawer
         open={openMenu}
         anchor='right'
@@ -41,12 +35,12 @@ const HeaderMobile = () => {
         <Container>
           <LogoContainer>
             <IconButtonStyles
-              icon={<CloseIcon />}
+              icon={<>x</>}
               onClick={() => {
                 setOpenMenu(false);
               }}
             />
-            <LogoSkyTechWhite />
+            logo
           </LogoContainer>
 
           <HeaderActions />
@@ -55,7 +49,7 @@ const HeaderMobile = () => {
             {ITEM_MENU.map((item, index) => (
               <MenuItem key={index}>
                 <>
-                  <item.icon />
+                  {/* <item.icon /> */}
                   <MenuItemText variant='h3'>{item.title}</MenuItemText>
                 </>
               </MenuItem>

@@ -5,7 +5,6 @@ import {
   Typography
 } from '@material-ui/core';
 
-import { CloseIcon } from '../../../icons';
 import { useStyles } from './title-styles';
 
 type Props = DialogTitleProps & {
@@ -40,7 +39,7 @@ const Title = ({
           className={classes.closeButton}
           onClick={onClose}
         >
-          <CloseIcon />
+          x
         </IconButton>
       )}
     </DialogTitle>

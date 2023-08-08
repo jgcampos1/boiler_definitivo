@@ -5,7 +5,9 @@ export const Container = styled(Box)(({ theme }) => ({
   alignItems: 'flex-start',
   justifyContent: 'center',
   flexDirection: 'column',
-  gap: theme.spacing(2)
+  gap: theme.spacing(2),
+  width: '100%',
+  padding: theme.spacing(4)
 }));
 
 export const Title = styled(Typography)(({ theme }) => ({

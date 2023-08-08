@@ -1,5 +1,5 @@
-import { ContainerGrid, TextButton } from '../../';
-import { LogoSkyTechWhite } from '../../icons';
+import { TextButton } from '../../buttons';
+import ContainerGrid from '../../container-grid/container-grid';
 import {
   HeaderContainer,
   Container,
@@ -13,8 +13,7 @@ const HeaderDesktop = () => {
       <Container>
         <ContainerGrid>
           <Content>
-            <LogoSkyTechWhite />
-
+            Logo
             <ButtonBox>
               <TextButton
                 textBold

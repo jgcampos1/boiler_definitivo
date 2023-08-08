@@ -11,9 +11,6 @@ import { authSlice } from '~/app/application/features/auth/store/slice/auth-slic
 import { authSliceName } from '~/app/application/features/auth/store/types';
 import { ToastSlice } from '~/app/application/features/general/toast/slice/toast-slice';
 import { toastSliceName } from '~/app/application/features/general/toast/types/toast-constants';
-import { userReducer } from '~/app/application/features/user/store/reducer';
-import { userSlice } from '~/app/application/features/user/store/slice/user-slice';
-import { userSliceName } from '~/app/application/features/user/store/types';
 import { apiSlice } from '~/app/core/store/apiSlice';
 
 import { type AppDispatch as AppDispatchTypes, type RootState } from './types';
@@ -25,9 +22,7 @@ export const store = configureStore({
     [apiSlice.reducerPath]: apiSlice.reducer,
     [toastSliceName]: ToastSlice.reducer,
     [authSliceName]: authSlice.reducer,
-    [userSliceName]: userSlice.reducer,
-    auth: authReducer,
-    user: userReducer
+    auth: authReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(apiSlice.middleware)

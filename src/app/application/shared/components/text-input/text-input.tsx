@@ -10,12 +10,12 @@ import {
   Box,
   Tooltip
 } from '@material-ui/core';
-import { Info } from '@mui/icons-material';
 import clsx from 'clsx';
 
 import { ValidationErrorType } from '../../common/protocols/validation';
 import { MaskOptions } from '../../common/types/mask-options-type';
 import { useMaskFormatter } from '../../hooks/use-mask-formatter';
+import { InfoIcon } from '../icons';
 import { useStyles } from './text-input-styles';
 
 export type TextInputProps = Omit<
@@ -140,7 +140,7 @@ const TextInput = ({
                 </Typography>
                 {tooltip && (
                   <Tooltip className={classes.formControlTip} title={tooltip}>
-                    <Info />
+                    <InfoIcon />
                   </Tooltip>
                 )}
               </Box>

@@ -4,7 +4,6 @@ import { AUTH_STORAGE_TOKENS } from '~/app/application/features/auth/domain/enti
 import { UserAuthModel } from '~/app/application/features/auth/domain/models/user-auth-model';
 import { decoderLoginService } from '~/app/application/features/auth/services/decoder-user-token';
 import { setToken } from '~/app/application/features/auth/store/actions/set-token';
-import { USER_STORAGE_TOKENS } from '~/app/application/features/user/domain/entities/user-tokens';
 import { cacheStorage } from '~/app/core/infra/cache';
 import { ROUTES } from '~/app/main/types/routes-enum';
 import { APP_ENV } from '~/env';
@@ -20,7 +19,7 @@ export const useAuth = () => {
   const cacheLocalStorage = cacheStorage;
   const tokenDecoder = decoderLoginService;
   const tokenKey = AUTH_STORAGE_TOKENS.AUTH;
-  const tokenKeyUser = USER_STORAGE_TOKENS.USER_INFO;
+  const tokenKeyUser = '';
 
   const returnToLogin = () => {
     window.location.href = `${APP_ENV.APP_URL}${ROUTES.HOME}`;

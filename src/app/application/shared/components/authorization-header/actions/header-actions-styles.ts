@@ -1,5 +1,4 @@
 import { Box, styled, Typography } from '@mui/material';
-import { ProfileIcon } from '~/app/application/shared/components';
 import MoreOptionMenuItem from '~/app/application/shared/components/more-option-menu-item/more-option-menu-item';
 
 export const Container = styled(Box)(() => ({
@@ -17,7 +16,7 @@ export const TagRole = styled(Typography)(({ theme }) => ({
   fontWeight: 'bold'
 }));
 
-export const IconProfile = styled(ProfileIcon)(({ theme }) => ({
+export const IconProfile = styled(Box)(({ theme }) => ({
   fill: theme.palette.common.white,
   width: 30,
   height: 30

@@ -1,7 +1,7 @@
 import { ReactElement, useState, useEffect, ReactNode } from 'react';
 
 import { Box, IconButton, Popover, Typography } from '@material-ui/core';
-import { KeyboardArrowDownRounded } from '@mui/icons-material';
+import { Control } from '@phosphor-icons/react';
 import clsx from 'clsx';
 
 import { useStyles } from './more-option-styles';
@@ -95,7 +95,7 @@ const MoreOption = ({
         <Typography className={classes.dropdownTitle}>
           {labelButton ?? 'Actions'}
         </Typography>
-        <KeyboardArrowDownRounded />
+        <Control />
       </IconButton>
 
       <Popover

@@ -1,12 +1,7 @@
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useNavigate } from 'react-router';
 
-import { useLazyGetUserProfileQuery } from '~/app/application/features/user/store/hooks';
-import {
-  MoreOption,
-  EyeVisibilityIcon,
-  LogoutIcon
-} from '~/app/application/shared/components';
+import { MoreOption } from '~/app/application/shared/components';
 import MoreOptionMenuItem from '~/app/application/shared/components/more-option-menu-item/more-option-menu-item';
 import { useAuth } from '~/app/application/shared/hooks/use-auth';
 import { theme } from '~/app/application/shared/styles/theme';
@@ -23,16 +18,10 @@ export const HeaderActions = () => {
   const navigate = useNavigate();
   const { logout, user: userAuth } = useAuth();
 
-  const [loadUser, { data: user }] = useLazyGetUserProfileQuery();
-
-  useEffect(() => {
-    loadUser({ id: userAuth?.userId });
-  }, [userAuth]);
-
   const roleName = useMemo(() => {
     return userAuth?.roles[0]?.name;
   }, [userAuth?.roles]);
-  const username = user?.firstName || 'Usuário';
+  const username = 'user?.firstName' || 'Usuário';
 
   const redirectUserPage = () => navigate(`${ROUTES.HOME}`);
 
@@ -43,14 +32,9 @@ export const HeaderActions = () => {
         icon={<IconProfile />}
         textColor={theme.palette.common.white}
       >
-        <MoreOptionMenuItem
-          title='Ver perfil'
-          icon={<EyeVisibilityIcon />}
-          onClick={redirectUserPage}
-        />
+        <MoreOptionMenuItem title='Ver perfil' onClick={redirectUserPage} />
         <MoreOptionMenuItemLogOut
           title='logout'
-          icon={<LogoutIcon />}
           onClick={() => {
             logout();
           }}

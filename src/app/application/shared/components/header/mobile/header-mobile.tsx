@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import { TextButton } from '../../buttons';
-import { CloseIcon, LogoSkyTechWhite, MenuIcon } from '../../icons';
 import {
   LogoContainer,
   CustomDrawer,
@@ -15,14 +14,13 @@ const HeaderMobile = () => {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
   return (
     <HeaderContainer>
-      <LogoSkyTechWhite />
+      logo
       <IconButtonStyles
-        icon={<MenuIcon />}
+        icon={<>menu</>}
         onClick={() => {
           setOpenMenu(true);
         }}
       />
-
       <CustomDrawer
         open={openMenu}
         anchor='right'
@@ -33,12 +31,12 @@ const HeaderMobile = () => {
         <Container>
           <LogoContainer>
             <IconButtonStyles
-              icon={<CloseIcon />}
+              icon={<>x</>}
               onClick={() => {
                 setOpenMenu(false);
               }}
             />
-            <LogoSkyTechWhite />
+            logo
           </LogoContainer>
           <ButtonBox>
             <TextButton

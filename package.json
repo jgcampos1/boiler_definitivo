@@ -13,7 +13,7 @@
     "check-types": "tsc",
     "pre-commit": "yarn check-types && yarn lint-staged",
     "pre-push": "yarn check-types",
-    "generate-style":"node build-output.js"
+    "generate-style": "node build-output.js"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -22,10 +22,10 @@
     "@loadable/component": "^5.15.3",
     "@material-ui/core": "^4.12.4",
     "@material-ui/lab": "^4.0.0-alpha.61",
-    "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.10",
     "@mui/styled-engine": "^5.11.9",
     "@mui/styled-engine-sc": "^5.11.9",
+    "@phosphor-icons/react": "^2.0.10",
     "@reduxjs/toolkit": "^1.9.3",
     "@tokens-studio/sd-transforms": "^0.9.5",
     "@types/react-router": "^5.1.20",
@@ -73,5 +73,10 @@
     "style-dictionary": "^3.8.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
+  },
+  "modularizeImports": {
+    "@phosphor-icons/react": {
+      "transform": "@phosphor-icons/react/{{member}}"
+    }
   }
 }

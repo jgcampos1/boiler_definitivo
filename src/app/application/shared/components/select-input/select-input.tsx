@@ -11,13 +11,13 @@ import {
   Box,
   Tooltip
 } from '@material-ui/core';
-import { Info, More } from '@mui/icons-material';
 import clsx from 'clsx';
 
 import { isEmpty } from '../../common/helpers/is-empty';
 import { ValidationErrorType } from '../../common/protocols/validation';
 import { OptionType } from '../../common/types/option-type';
 import { BaseButton } from '../buttons';
+import { InfoIcon } from '../icons';
 import { useStyles } from './select-input-styles';
 
 type Props = TextFieldProps & {
@@ -122,7 +122,7 @@ const SelectInput = ({
                 <Typography className={classes.fieldName}>{label}</Typography>
                 {tooltip && (
                   <Tooltip className={classes.formControlTip} title={tooltip}>
-                    <Info />
+                    <InfoIcon />
                   </Tooltip>
                 )}
               </Box>
@@ -146,7 +146,7 @@ const SelectInput = ({
               {actionButtonTitle && actionButtonClick && (
                 <BaseButton
                   title={actionButtonTitle}
-                  startIcon={<More />}
+                  startIcon={<>+</>}
                   className={classes.actionButton}
                   onClick={actionButtonClick}
                 />

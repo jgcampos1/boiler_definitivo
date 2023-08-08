@@ -15,7 +15,7 @@ const MenuGlobal = () => {
       {ITEM_MENU.map((item, index) => (
         <MenuItem key={index} onClick={() => navigateTo(item.path)}>
           <>
-            <item.icon />
+            {/* <item.icon /> */}
             <MenuItemText variant='h3'>{item.title}</MenuItemText>
           </>
         </MenuItem>

@@ -1,9 +1,6 @@
 import { Box, styled, Typography } from '@mui/material';
-import {
-  MoreOptionMenuItem,
-  ProfileIcon
-} from '~/app/application/shared/components';
-
+import { User } from '@phosphor-icons/react';
+import { MoreOptionMenuItem } from '~/app/application/shared/components';
 export const Container = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
@@ -19,7 +16,7 @@ export const TagRole = styled(Typography)(({ theme }) => ({
   fontWeight: 'bold'
 }));
 
-export const IconProfile = styled(ProfileIcon)(({ theme }) => ({
+export const IconProfile = styled(User)(({ theme }) => ({
   fill: theme.palette.common.white,
   width: 30,
   height: 30

@@ -1,6 +1,5 @@
-import { styled, Theme } from '@mui/material';
+import { Box, styled, Theme } from '@mui/material';
 import { includesForwardProps } from '~/app/application/shared/common/helpers/includes-forward-props';
-import { TraceIcon } from '~/app/application/shared/components/icons';
 
 type StyledProps = {
   textColor: 'gray' | 'white' | 'black';
@@ -11,7 +10,7 @@ export const Wrapper = styled('div')(() => ({
   zIndex: 1
 }));
 
-export const Icon = styled(TraceIcon)(({ theme }) => ({
+export const Icon = styled(Box)(({ theme }) => ({
   color: theme.palette.primary.dark,
   display: 'inline',
   marginBottom: theme.spacing(-1),

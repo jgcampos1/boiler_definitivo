@@ -1,7 +1,4 @@
-import {
-  ContainerGrid,
-  LogoSkyTechWhite
-} from '~/app/application/shared/components';
+import { ContainerGrid } from '~/app/application/shared/components';
 
 import { HeaderActions } from '../actions/header-actions';
 import { HeaderContainer, Container, Content } from './header-desktop-styles';
@@ -11,7 +8,7 @@ const HeaderDesktop = () => {
       <Container>
         <ContainerGrid>
           <Content>
-            <LogoSkyTechWhite />
+            menu
             <HeaderActions />
           </Content>
         </ContainerGrid>

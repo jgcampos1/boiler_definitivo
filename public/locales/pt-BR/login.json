@@ -1,0 +1,45 @@
+{
+  "login": {
+    "title": "Acessar",
+    "email": "Email",
+    "password": "Senha",
+    "forgot": "Esqueceu sua senha?",
+    "signInBtnText": "Acessar"
+  },
+  "background": {
+    "title": "Beta CRM",
+    "text": "Lorem ipsum dolor sit amet consectetur. Aenean vestibulum molestie eget convallis imperdiet fermentum. Ullamcorper tellus sagittis lorem tellus risus auctor cursus phasellus. Turpis mollis ac etiam in augue. A enim tincidunt sapien malesuada tincidunt."
+  },
+  "forgotPassword": {
+    "title": "Recuperar Senha",
+    "subtitle": "Lorem ipsum dolor sit amet",
+    "email": "Email",
+    "resetBtnText": "Recuperar"
+  },
+  "recoveryEmailSent": {
+    "title": "Email de Recuperação Enviado",
+    "subtitle": "Lorem ipsum dolor sit amet",
+    "returnToLoginBtn": "Voltar a tela de login"
+  },
+  "resetPassword": {
+    "title": "Resetar Senha",
+    "subtitle": "Senha deve ter 8 caracteres e pelo menos um símbolo",
+    "passwordInput": "Senha",
+    "repeatPasswordInput": "Repetir Senha",
+    "resetBtn": "Resetar"
+  },
+  "successPasswordUpdate": {
+    "title": "Senha Atualizada",
+    "subtitle": "Lorem ipsum dolor sit amet",
+    "returnLoginScreenBtn": "{auth.recoveryEmailSent.returnToLoginBtn}"
+  },
+  "register": {
+    "phoneNumber": "Numero de Telefone",
+    "document": "Documento",
+    "email": "Email",
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "bnt": "Registrar",
+    "title": "Registrar"
+  }
+}

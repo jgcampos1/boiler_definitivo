@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 
+import { useTranslation } from '../../hooks/use-translation';
 import {
   BackgroundImage,
   Container,
@@ -14,7 +15,9 @@ import {
 interface Props {
   children: ReactNode;
 }
+
 const AuthFormLayout = ({ children }: Props) => {
+  const { translate } = useTranslation('login');
   return (
     <Container>
       <Content>
@@ -26,12 +29,11 @@ const AuthFormLayout = ({ children }: Props) => {
       </Content>
       <BackgroundImage>
         <BoxTextBackground>
-          <TitleBackground variant='h2'>Beta CRM</TitleBackground>
+          <TitleBackground variant='h2'>
+            {translate('background.title')}
+          </TitleBackground>
           <DescriptionBackground variant='body1'>
-            Lorem ipsum dolor sit amet consectetur. Aenean vestibulum molestie
-            eget convallis imperdiet fermentum. Ullamcorper tellus sagittis
-            lorem tellus risus auctor cursus phasellus. Turpis mollis ac etiam
-            in augue. A enim tincidunt sapien malesuada tincidunt.
+            {translate('background.text')}
           </DescriptionBackground>
         </BoxTextBackground>
       </BackgroundImage>

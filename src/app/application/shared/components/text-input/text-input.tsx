@@ -32,7 +32,6 @@ export type TextInputProps = Omit<
   paddingLeftMediumSymbol?: boolean;
   paddingLeftSmallSymbol?: boolean;
   isMaxContent?: boolean;
-  icon?: ReactNode;
   required?: boolean;
   optional?: boolean;
   isLabelBold?: boolean;
@@ -45,6 +44,7 @@ export type TextInputProps = Omit<
     type: MaskOptions;
     mode: 'onChange' | 'onBlur';
   };
+  InputProps?: any;
   onBlur?: (value: string) => void;
   onChange?: (value: string | React.ChangeEvent<HTMLInputElement>) => void;
 };
@@ -57,6 +57,7 @@ const TextInput = ({
   onChange,
   onBlur,
   mask,
+  InputProps,
   optional,
   control,
   size,
@@ -162,6 +163,7 @@ const TextInput = ({
               size={size}
               {...inputProps}
               {...field}
+              {...{ InputProps }}
               onWheel={onWheel}
               onChange={handleChange}
               onBlur={handleBlur}

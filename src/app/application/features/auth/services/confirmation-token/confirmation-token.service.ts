@@ -12,6 +12,7 @@ export const confirmationTokenService: ServiceCommand<ConfirmationToken.Response
 export namespace ConfirmationToken {
   export type Params = {
     token: string;
+    password: string;
   };
   export type Response = {
     success: boolean;

@@ -6,6 +6,7 @@
   },
   "login": {
     "title": "Acessar",
+    "confirmPassword": "Confirme a Senha",
     "email": "Email",
     "password": "Senha",
     "forgot": "Esqueceu sua senha?",
@@ -39,13 +40,15 @@
     "subtitle": "Lorem ipsum dolor sit amet",
     "returnLoginScreenBtn": "{auth.recoveryEmailSent.returnToLoginBtn}"
   },
-  "register": {
-    "phoneNumber": "Numero de Telefone",
-    "document": "Documento",
-    "email": "Email",
-    "firstName": "Nome",
-    "lastName": "Sobrenome",
-    "bnt": "Registrar",
-    "title": "Registrar"
+  "confirmAccount": {
+    "title": "Confirmar Conta",
+    "subtitle": "Crie uma senha para sua conta",
+    "btnText": "Criar"
+  },
+  "resendEmail": {
+    "title": "Reenviar Email de Confirmação",
+    "subtitle": "Seu token de confirmação expirou, confirme para reenviar outro a sua caixa de email",
+    "btnText": "Reenviar",
+    "success": "Email enviado, por favor verifique sua caixa de email"
   }
 }

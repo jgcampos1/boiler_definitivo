@@ -5,5 +5,6 @@ export const {
   useConfirmationTokenMutation,
   useSendConfirmationEmailMutation,
   useRecoveryPasswordMutation,
-  useResetPasswordMutation
+  useResetPasswordMutation,
+  useVerifySecurityTokenMutation
 } = authApi;

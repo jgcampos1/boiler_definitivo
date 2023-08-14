@@ -7,5 +7,6 @@ export const AUTH_API_ROUTES = {
   RESET_PASSWORD: makeApiUrl('account/reset-password'),
   CONFIRMATION_TOKEN: makeApiUrl('account/confirm-account'),
   SEND_EMAIL_CONFIRMATION: makeApiUrl('account/send-email-confirmation'),
-  REQUEST_RESET_PASSWORD: makeApiUrl('account/request-reset-password')
+  REQUEST_RESET_PASSWORD: makeApiUrl('account/request-reset-password'),
+  VERIFY_SECURITY_TOKEN: makeApiUrl('account/verify-security-token')
 };

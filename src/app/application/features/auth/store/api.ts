@@ -18,6 +18,10 @@ import {
   sendConfirmationService
 } from '../services/send-confirmation-email/send-confirmation.service';
 import { TokenLogout, tokenLogoutService } from '../services/token-logout';
+import {
+  VerifySecurityToken,
+  verifySecurityTokenService
+} from '../services/verify-security-token';
 
 export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
@@ -66,6 +70,15 @@ export const authApi = apiSlice.injectEndpoints({
     >({
       query: (params) => ({
         service: resetPasswordService,
+        params
+      })
+    }),
+    verifySecurityToken: builder.mutation<
+      VerifySecurityToken.Response,
+      VerifySecurityToken.Params
+    >({
+      query: (params) => ({
+        service: verifySecurityTokenService,
         params
       })
     })

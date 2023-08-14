@@ -5,9 +5,9 @@ import { useTranslation } from '~/app/application/shared/hooks/use-translation';
 import { ROUTES } from '~/app/main/types/routes-enum';
 
 import { useRecoveryPasswordMutation } from '../../../store/hooks';
-import { ConfirmationSendEmail } from './components/confirmation-send-email/confirmation-send-email';
-import { FormForgotPassword } from './components/form/form-forgot-password';
-import { resolver, FormForgotPasswordType } from './components/form/validator';
+import { ConfirmationSendEmail } from '../../components/confirmation-send-email/confirmation-send-email';
+import { FormForgotPassword } from './form/form-forgot-password';
+import { resolver, FormForgotPasswordType } from './form/validator';
 
 export const ForgotPassword = () => {
   const navigate = useNavigate();

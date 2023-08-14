@@ -7,7 +7,7 @@ import { useTranslation } from '~/app/application/shared/hooks/use-translation';
 import { ROUTES } from '~/app/main/types/routes-enum';
 
 import { useResetPasswordMutation } from '../../../store/hooks';
-import { ConfirmationSendEmail } from '../forgot-password/components/confirmation-send-email/confirmation-send-email';
+import { ConfirmationSendEmail } from '../../components/confirmation-send-email/confirmation-send-email';
 import { FormForgotPassword } from './components/form/form-reset-password';
 import { resolver, FormResetPasswordType } from './components/form/validator';
 

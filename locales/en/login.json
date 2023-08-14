@@ -8,6 +8,7 @@
     "title": "Sign In",
     "email": "Email",
     "password": "Password",
+    "confirmPassword": "Confirm Password",
     "forgot": "Forgot your password?",
     "signInBtnText": "Sign In",
     "successMessage": "Login done successfully"
@@ -39,13 +40,15 @@
     "subtitle": "Lorem ipsum dolor sit amet",
     "returnLoginScreenBtn": "{auth.recoveryEmailSent.returnToLoginBtn}"
   },
-  "register": {
-    "phoneNumber": "Phone Number",
-    "document": "Document",
-    "email": "Email",
-    "firstName": "First Name",
-    "lastName": "Last Name",
-    "bnt": "register",
-    "title": "Register"
+  "confirmAccount": {
+    "title": "Confirm Account",
+    "subtitle": "Create a password for your account",
+    "btnText": "Create"
+  },
+  "resendEmail": {
+    "title": "Resend Confirmation Email",
+    "subtitle": "Your confirmation token has expired, confirm to resend another to your email inbox",
+    "btnText": "Resend",
+    "success": "Email sent, please check your email inbox"
   }
 }

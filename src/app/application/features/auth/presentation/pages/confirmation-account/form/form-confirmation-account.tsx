@@ -10,21 +10,26 @@ import {
   SubTitle,
   SubmitButton,
   Title
-} from './form-reset-password-styles';
+} from './form-confirmation-account-styles';
+import { FormConfirmAccountType } from './validator';
 
 interface Props {
-  submit: (value: any) => void;
+  submit: (value: FormConfirmAccountType) => void;
+  isLoading: boolean;
 }
 
-export const FormForgotPassword = ({ submit }: Props) => {
+export const FormConfirmationAccount = ({ submit, isLoading }: Props) => {
+  const [showPassword, toggleShowPassword] = useToggle(false);
   const { translate } = useTranslation('login');
   const { handleSubmit } = useFormContext();
-  const [showPassword, toggleShowPassword] = useToggle(false);
 
   return (
     <Container component='form' onSubmit={handleSubmit(submit)}>
-      <Title variant='h4'>{translate('resetPassword.title')}</Title>
-      <SubTitle variant='body1'>{translate('resetPassword.subtitle')}</SubTitle>
+      <Title variant='h4'>{translate('confirmAccount.title')}</Title>
+      <SubTitle variant='body1'>
+        {translate('confirmAccount.subtitle')}
+      </SubTitle>
+
       <TextInput
         name='password'
         placeholder={translate('login.password')}
@@ -59,9 +64,9 @@ export const FormForgotPassword = ({ submit }: Props) => {
         }}
         type={showPassword ? 'text' : 'password'}
       />
-
-      <SubmitButton variant='contained' type='submit'>
-        {translate('resetPassword.resetBtn')}
+      {translate('confirmAccount.btnText')}
+      <SubmitButton {...{ isLoading }} type='submit'>
+        {translate('confirmAccount.btnText')}
       </SubmitButton>
     </Container>
   );

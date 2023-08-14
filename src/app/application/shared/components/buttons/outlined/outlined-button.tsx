@@ -10,7 +10,7 @@ type Props = {
   handleClick?: () => void;
 };
 
-const OutlinedButton: React.FC = ({
+const OutlinedButton = ({
   buttonColor = 'primary',
   className,
   handleClick,

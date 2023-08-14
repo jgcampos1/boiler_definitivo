@@ -12,7 +12,6 @@ export const emailLoginService: ServiceCommand<EmailLogin.Response> =
     httpClient,
     cacheStorage,
     AUTH_STORAGE_TOKENS.AUTH,
-    // USER_STORAGE_TOKENS.USER_INFO,
     AUTH_API_ROUTES.LOGIN
   );
 

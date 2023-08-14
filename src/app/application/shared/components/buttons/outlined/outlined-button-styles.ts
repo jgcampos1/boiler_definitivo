@@ -31,8 +31,7 @@ export const Button = styled(MuiButton, {
       : theme.palette.primary.dark
   }`,
   paddingLeft: 20,
-  paddingRight: 20,
-  borderRadius: 0
+  paddingRight: 20
 }));
 
 export const Text = styled(Typography, {

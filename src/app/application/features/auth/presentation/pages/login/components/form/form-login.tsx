@@ -1,24 +1,26 @@
 import { useFormContext } from 'react-hook-form';
 
-import { PasswordIcon, TextInput } from '~/app/application/shared/components';
+import {
+  PasswordIcon,
+  TextButton,
+  TextInput
+} from '~/app/application/shared/components';
 import { useToggle } from '~/app/application/shared/hooks/use-toggle';
 import { useTranslation } from '~/app/application/shared/hooks/use-translation';
 import { theme } from '~/app/application/shared/styles/theme';
 
-import {
-  Container,
-  ForgotPasswordButton,
-  SubmitButton,
-  Title
-} from './form-login-styles';
+import { Container, SubmitButton, Title } from './form-login-styles';
+import { FormLoginType } from './validator/type';
 
 interface Props {
-  submit: (value: any) => void;
+  submit: (value: FormLoginType) => void;
+  isLoading?: boolean;
 }
-export const FormLogin = ({ submit }: Props) => {
+export const FormLogin = ({ submit, isLoading }: Props) => {
   const { translate } = useTranslation('login');
   const { handleSubmit } = useFormContext();
-  const [showPassword, toggleShowPassword] = useToggle(true);
+  const [showPassword, toggleShowPassword] = useToggle(false);
+
   return (
     <Container component='form' onSubmit={handleSubmit(submit)}>
       <Title variant='h4'>{translate('login.title')}</Title>
@@ -45,10 +47,8 @@ export const FormLogin = ({ submit }: Props) => {
         }}
         type={showPassword ? 'text' : 'password'}
       />
-      <ForgotPasswordButton type='button' variant='text' size='small' title=''>
-        {translate('login.forgot')}
-      </ForgotPasswordButton>
-      <SubmitButton variant='contained' type='submit'>
+      <TextButton title={translate('login.forgot')} />
+      <SubmitButton variant='contained' type='submit' {...{ isLoading }}>
         {translate('login.signInBtnText')}
       </SubmitButton>
     </Container>

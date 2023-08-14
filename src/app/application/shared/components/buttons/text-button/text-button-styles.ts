@@ -66,7 +66,7 @@ export const Text = styled(Typography, {
     all: 'unset',
     cursor: 'pointer',
     textTransform: 'none',
-    fontSize: theme.typography.pxToRem(16),
+    fontSize: theme.typography.pxToRem(12),
     fontWeight: textBold ? 'bold' : '300',
     color:
       customTextColor ??

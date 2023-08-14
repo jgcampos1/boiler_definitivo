@@ -23,9 +23,9 @@ export const generalRoutes: IRoute[] = [
   {
     path: '/',
     name: 'Home',
-    private: false,
+    private: true,
     element: <Home />,
-    layout: 'UnauthorizedLayout',
+    layout: 'AuthFormLayout',
     roles: []
   },
   {

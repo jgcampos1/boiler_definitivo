@@ -15,6 +15,7 @@ import clsx from 'clsx';
 import { ValidationErrorType } from '../../common/protocols/validation';
 import { MaskOptions } from '../../common/types/mask-options-type';
 import { useMaskFormatter } from '../../hooks/use-mask-formatter';
+import { useTranslation } from '../../hooks/use-translation';
 import { InfoIcon } from '../icons';
 import { useStyles } from './text-input-styles';
 
@@ -77,6 +78,7 @@ const TextInput = ({
   inputWidth,
   ...inputProps
 }: TextInputProps) => {
+  const { translate } = useTranslation('login');
   const maskFormatter = useMaskFormatter(mask?.type);
   const classes = useStyles({
     optional,
@@ -184,7 +186,7 @@ const TextInput = ({
 
             {invalid && (
               <FormHelperText className={classes.errorHelperText}>
-                {errorMessage}
+                {translate(errorMessage)}
               </FormHelperText>
             )}
           </FormControl>

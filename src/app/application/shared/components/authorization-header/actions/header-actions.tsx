@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+// import { useMemo } from 'react';
 import { useNavigate } from 'react-router';
 
 import { MoreOption } from '~/app/application/shared/components';
@@ -10,17 +10,17 @@ import { ROUTES } from '~/app/main/types/routes-enum';
 import {
   Container,
   IconProfile,
-  MoreOptionMenuItemLogOut,
-  TagRole
+  MoreOptionMenuItemLogOut
+  //   TagRole
 } from './header-actions-styles';
 
 export const HeaderActions = () => {
   const navigate = useNavigate();
-  const { logout, user: userAuth } = useAuth();
+  const { logout } = useAuth();
 
-  const roleName = useMemo(() => {
-    return userAuth?.roles[0]?.name;
-  }, [userAuth?.roles]);
+  //   const roleName = useMemo(() => {
+  //     return userAuth?.roles[0]?.name;
+  //   }, [userAuth?.roles]);
   const username = 'user?.firstName' || 'Usuário';
 
   const redirectUserPage = () => navigate(`${ROUTES.HOME}`);
@@ -40,7 +40,7 @@ export const HeaderActions = () => {
           }}
         />
       </MoreOption>
-      <TagRole>{roleName}</TagRole>
+      {/* <TagRole>{roleName}</TagRole> */}
     </Container>
   );
 };

@@ -16,7 +16,6 @@ export class EmailLogin implements ServiceCommand<EmailLogin.Response> {
     private readonly httpClient: HttpClient<EmailLogin.Response>,
     private readonly cacheStorage: CacheStorage,
     private readonly tokenKey: string,
-    // private readonly tokenUserKey: string,
     private readonly url: string
   ) {}
 
@@ -28,19 +27,20 @@ export class EmailLogin implements ServiceCommand<EmailLogin.Response> {
       url: this.url,
       body: params
     });
-
     const responseOrError = RequestResponse.handle(httpResponse);
 
     if (responseOrError.isError()) {
       return error(responseOrError.value);
     }
+
     const response = responseOrError.value.response;
 
     // const userProfileData: GetUserProfile.LocalStorageSystemInfo =
     //   this.cacheStorage.get(this.tokenUserKey);
 
-    // const { accessToken, ...user } = response;
-    // this.cacheStorage.set(this.tokenKey, accessToken);
+    const { accessToken } = response;
+
+    this.cacheStorage.set(this.tokenKey, accessToken);
 
     // this.cacheStorage.set(this.tokenUserKey, { userProfileData, ...user });
 

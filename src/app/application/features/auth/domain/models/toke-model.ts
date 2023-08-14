@@ -1,6 +1,11 @@
+import { RoleModel } from './role-model';
+
 export type TokenModel = {
-  id?: string;
-  email?: string;
   accessToken?: string;
-  expiresIn?: number;
+  refreshToken?: string;
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  userId?: string;
+  roles?: RoleModel[];
 };

@@ -9,6 +9,9 @@ const breakpoints = createBreakpoints({});
 
 export const theme = createTheme({
   palette: {
+    primary: {
+      main: Colors.Primary
+    },
     secondary: {
       main: Colors.Secondary
     },
@@ -26,8 +29,8 @@ export const theme = createTheme({
     divider: Colors.GrayLine
   },
   typography: {
-    fontFamily: 'Roboto',
-    fontSize: Number(styleJson.fontSize[1]),
+    fontFamily: 'Inter',
+    fontSize: Number(styleJson.fontSize[0]),
     [breakpoints.up('md')]: {
       htmlFontSize: Number(styleJson.fontSize[0])
     },
@@ -40,7 +43,7 @@ export const theme = createTheme({
     },
     // TODO implement button in design system
     button: {
-      fontSize: typography.pxToRem(16)
+      fontSize: Number(styleJson.fontSize[0])
     }
   },
   components: {

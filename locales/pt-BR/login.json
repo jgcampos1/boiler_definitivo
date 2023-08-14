@@ -1,15 +1,16 @@
 {
   "validator": {
-    "invalidField": "Campo inválido",
-    "requiredField": "Campo obrigatório",
-    "invalidEmail": "Email inválido"
+    "invalidField": "Invalid field",
+    "requiredField": "Required field",
+    "invalidEmail": "Invalid email"
   },
   "login": {
     "title": "Acessar",
     "email": "Email",
     "password": "Senha",
     "forgot": "Esqueceu sua senha?",
-    "signInBtnText": "Acessar"
+    "signInBtnText": "Acessar",
+    "successMessage": "Login realizado com sucesso"
   },
   "background": {
     "title": "Beta CRM",

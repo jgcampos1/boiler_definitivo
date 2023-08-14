@@ -6,23 +6,21 @@ import Backend from 'i18next-http-backend';
 const availableLanguages = ['en', 'pt-BR'];
 
 const translationOptions: InitOptions = {
-  lng: 'pt-BR',
+  lng: 'en',
   load: 'currentOnly',
   preload: availableLanguages,
   debug: false,
   supportedLngs: availableLanguages,
-  fallbackLng: 'pt-BR',
-  defaultNS: ['exception'],
-  ns: ['exception'],
+  fallbackLng: 'en',
+  defaultNS: ['common', 'exception'],
+  ns: ['common', 'exception'],
   react: {
     useSuspense: true,
     bindI18n: 'languageChanged'
   },
-
   interpolation: {
     escapeValue: false
   },
-
   backend: {
     loadPath: '/locales/{{lng}}/{{ns}}.json'
   }

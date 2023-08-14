@@ -1,4 +1,9 @@
 {
+  "validator": {
+    "invalidField": "Invalid field",
+    "requiredField": "Required field",
+    "invalidEmail": "Invalid email"
+  },
   "REQUIRED_FIELD": "Campo obrigatório",
   "MAX_LENGTH": "Deve ter {{length}} caracteres ou menos.",
   "MIN_LENGTH": "Deve ter {{length}} caracteres ou mais.",
@@ -19,7 +24,5 @@
   "INVALID_PHONE_NUMBER": "Phone Number invalid",
   "MISMATCH_PASSWORD_FIELD": "As senhas precisam ser iguais",
   "PASSWORD_TOO_SHORT": "A senha deve ter no mínimo 8 caracteres",
-
-  "INVALID_TOKEN":"Token de usuário inválido"
-
+  "INVALID_TOKEN": "Token de usuário inválido"
 }

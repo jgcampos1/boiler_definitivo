@@ -2,6 +2,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 
 import { useToastAlert } from '~/app/application/shared/hooks/use-toast-alert';
+import { useTranslation } from '~/app/application/shared/hooks/use-translation';
 import { ROUTES } from '~/app/main/types/routes-enum';
 
 import { useEmailLoginMutation } from '../../../store/hooks';
@@ -11,6 +12,7 @@ import { FormLoginType } from './components/form/validator/type';
 
 export const Login = () => {
   const navigate = useNavigate();
+  const { translate } = useTranslation('login');
   const [singIn, { isLoading, isError, isSuccess, error }] =
     useEmailLoginMutation();
   const methods = useForm<FormLoginType>({
@@ -24,7 +26,7 @@ export const Login = () => {
     isError,
     isSuccess,
     error,
-    successMessage: 'Login realizado com sucesso',
+    successMessage: translate('login.successMessage'),
     onSuccess: () => {
       navigate(ROUTES.HOME);
     }

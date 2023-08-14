@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 
+import { TextLogo } from '../../components';
 import { useTranslation } from '../../hooks/use-translation';
 import {
   BackgroundImage,
@@ -22,7 +23,7 @@ const AuthFormLayout = ({ children }: Props) => {
     <Container>
       <Content>
         <LogoContainer>
-          <img src='./public/assets/logo/text-logo.svg' />
+          <TextLogo />
         </LogoContainer>
 
         <ContainerForm>{children}</ContainerForm>

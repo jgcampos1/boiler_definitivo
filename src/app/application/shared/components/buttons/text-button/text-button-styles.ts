@@ -40,9 +40,8 @@ export const Button = styled(MuiButton, {
     includesForwardProps(prop as string, ['buttonColor'])
 })<ButtonProps>(({ buttonColor, theme }) => ({
   height: 35,
-  paddingLeft: 20,
-  paddingRight: 20,
-  borderRadius: 8,
+  padding: theme.spacing(0, 2),
+  borderRadius: '8px 8px 0px 0px',
   display: 'flex',
   gap: theme.spacing(1),
   alignItems: 'center',

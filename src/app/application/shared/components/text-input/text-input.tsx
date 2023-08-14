@@ -78,7 +78,7 @@ const TextInput = ({
   inputWidth,
   ...inputProps
 }: TextInputProps) => {
-  const { translate } = useTranslation('login');
+  const { translate } = useTranslation('common');
   const maskFormatter = useMaskFormatter(mask?.type);
   const classes = useStyles({
     optional,

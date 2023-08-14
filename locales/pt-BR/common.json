@@ -1,0 +1,7 @@
+{
+  "validator": {
+    "invalidField": "Campo inválido",
+    "requiredField": "Campo obrigatório",
+    "invalidEmail": "Email inválido"
+  }
+}

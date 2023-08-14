@@ -14,24 +14,13 @@ import {
   recoveryPasswordService
 } from '../services/recovery-password/recovery-password.service';
 import {
-  Register,
-  registerService
-} from '../services/register/register.service';
-import {
   SendConfirmationEmail,
   sendConfirmationService
 } from '../services/send-confirmation-email/send-confirmation.service';
 import { TokenLogout, tokenLogoutService } from '../services/token-logout';
 
-// TODO Refactor this and get from list
 export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    register: builder.mutation<Register.Response, Register.Params>({
-      query: (params) => ({
-        service: registerService,
-        params
-      })
-    }),
     emailLogin: builder.mutation<EmailLogin.Response, EmailLogin.Params>({
       query: (params) => ({
         service: emailLoginService,

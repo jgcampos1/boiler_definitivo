@@ -1,4 +1,5 @@
-import { Box, Typography, styled, Button } from '@mui/material';
+import { Box, Typography, styled } from '@mui/material';
+import { TextButton } from '~/app/application/shared/components';
 
 export const Container = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -14,10 +15,13 @@ export const Title = styled(Typography)(({ theme }) => ({
   color: theme.palette.common.black
 }));
 
-export const ForgotPasswordButton = styled(Button)(({ theme }) => ({
-  color: theme.palette.primary.main,
-  letterSpacing: '1.25px',
-  textTransform: 'uppercase'
+export const ForgotPasswordButton = styled(TextButton)(({ theme }) => ({
+  '& > button > p': {
+    color: theme.palette.primary.main,
+    letterSpacing: '1.25px',
+    textTransform: 'uppercase',
+    fontSize: theme.typography.pxToRem(14)
+  }
 }));
 
 export const SubTitle = styled(Typography)(({ theme }) => ({

@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
 import { CheckIcon } from '~/app/application/shared/components';
+import { TextButtonProps } from '~/app/application/shared/components/buttons/text-button/text-button';
 
 import {
   Container,
@@ -11,7 +12,7 @@ import {
 interface Props {
   text: string;
   subtitle: string;
-  returnToLoginBtn: string;
+  returnToLoginBtn: TextButtonProps;
 }
 export const ConfirmationSendEmail = ({
   returnToLoginBtn,
@@ -25,9 +26,7 @@ export const ConfirmationSendEmail = ({
         <Title variant='h4'>{text}</Title>
         <SubTitle variant='body1'>{subtitle}</SubTitle>
       </Box>
-      <ForgotPasswordButton type='button' variant='text' size='small' title=''>
-        {returnToLoginBtn}
-      </ForgotPasswordButton>
+      <ForgotPasswordButton {...returnToLoginBtn} />
     </Container>
   );
 };

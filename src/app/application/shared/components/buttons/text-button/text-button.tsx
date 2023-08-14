@@ -2,7 +2,7 @@ import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
 
 import { Button, Text, Link, Container, Line } from './text-button-styles';
 
-type Props = {
+export type TextButtonProps = {
   className?: string;
   title: string;
   buttonColor?: 'primary' | 'white';
@@ -27,7 +27,7 @@ export const TextButton = ({
   icon,
   target,
   removeLine = false
-}: Props) => {
+}: TextButtonProps) => {
   const BaseButton = (
     <Container {...{ className }}>
       <Button {...{ onClick, buttonColor }}>

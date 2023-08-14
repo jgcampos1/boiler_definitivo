@@ -43,7 +43,7 @@ export const FormForgotPassword = ({ submit }: Props) => {
         type={showPassword ? 'text' : 'password'}
       />
       <TextInput
-        name='replacePassword'
+        name='confirmPassword'
         placeholder={translate('login.password')}
         size='small'
         InputProps={{

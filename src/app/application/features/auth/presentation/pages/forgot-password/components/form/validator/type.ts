@@ -1,4 +1,3 @@
-export type FormLoginType = {
+export type FormForgotPasswordType = {
   email: string;
-  password: string;
 };

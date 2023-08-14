@@ -2,6 +2,8 @@
   "validator": {
     "invalidField": "Campo inválido",
     "requiredField": "Campo obrigatório",
-    "invalidEmail": "Email inválido"
+    "invalidEmail": "Email inválido",
+    "passwordInvalid": "A senha deve ter no mínimo 8 caracteres, minúsculos, maiúsculos e caracteres numéricos",
+    "missMatchField": "Campos devem ser iguais."
   }
 }

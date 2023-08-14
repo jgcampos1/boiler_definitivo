@@ -22,7 +22,7 @@ export const authRoutes: IRoute[] = [
     roles: []
   },
   {
-    path: '/reset-password/:token',
+    path: '/reset-password',
     name: 'ResetPassword',
     private: false,
     element: <ResetPassword />,

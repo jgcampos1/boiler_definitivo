@@ -7,12 +7,12 @@ import { ROUTES } from '~/app/main/types/routes-enum';
 import { useRecoveryPasswordMutation } from '../../../store/hooks';
 import { ConfirmationSendEmail } from './components/confirmation-send-email/confirmation-send-email';
 import { FormForgotPassword } from './components/form/form-forgot-password';
-import { resolver } from './components/form/validator';
+import { resolver, FormForgotPasswordType } from './components/form/validator';
 
 export const ForgotPassword = () => {
   const navigate = useNavigate();
   const [recoveryPassword, { isSuccess }] = useRecoveryPasswordMutation();
-  const methods = useForm({ resolver });
+  const methods = useForm<FormForgotPasswordType>({ resolver });
   const { translate } = useTranslation('login');
 
   const handleLogin = (value) => {

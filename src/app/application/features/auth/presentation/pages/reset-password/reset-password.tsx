@@ -1,30 +1,50 @@
+import { useEffect } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import { Navigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
+import { useQuery } from '~/app/application/shared/hooks/use-query';
 import { useTranslation } from '~/app/application/shared/hooks/use-translation';
+import { ROUTES } from '~/app/main/types/routes-enum';
 
 import { useResetPasswordMutation } from '../../../store/hooks';
 import { ConfirmationSendEmail } from '../forgot-password/components/confirmation-send-email/confirmation-send-email';
 import { FormForgotPassword } from './components/form/form-reset-password';
+import { resolver, FormResetPasswordType } from './components/form/validator';
 
 export const ResetPassword = () => {
+  const methods = useForm<FormResetPasswordType>({
+    resolver,
+    mode: 'onChange',
+    reValidateMode: 'onChange'
+  });
+  const navigate = useNavigate();
   const [resetPassword, { isSuccess }] = useResetPasswordMutation();
-  const methods = useForm();
   const { translate } = useTranslation('login');
   const handleLogin = ({ password }) => {
     resetPassword({ password, token });
   };
-  const { token } = useParams<{ token: string }>();
-  if (!token) {
-    Navigate({ to: '/login' });
-  }
+  const query = useQuery();
+  const token = query.get('token');
+
+  const navigateLogin = () => {
+    navigate(ROUTES.LOGIN);
+  };
+
+  useEffect(() => {
+    if (!token) {
+      return navigateLogin();
+    }
+  }, [token]);
 
   if (isSuccess) {
     return (
       <ConfirmationSendEmail
         subtitle={translate('successPasswordUpdate.subtitle')}
         text={translate('successPasswordUpdate.title')}
-        returnToLoginBtn={translate('successPasswordUpdate.returnToLoginBtn')}
+        returnToLoginBtn={{
+          title: translate('successPasswordUpdate.returnToLoginBtn'),
+          onClick: navigateLogin
+        }}
       />
     );
   }
